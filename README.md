@@ -128,7 +128,7 @@ POST /v1/chat/completions
 ```
 
 **Tested providers:**
-- DeepSeek API
+- OpenAI SDK
 - Google Gemini (OpenAI-compatible endpoint)
 - Ollama (local)
 - vLLM (local)
