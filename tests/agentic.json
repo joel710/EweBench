@@ -1,0 +1,86 @@
+[
+  {
+    "id": "ag_direct_call_01",
+    "prompt": "Kpɔ ŋkeke sia ƒe weather le Lomé nam.",
+    "eval_method": "format",
+    "expected_format": {"contains_function_call": true, "contains_ewe": false},
+    "description": "Appel direct — météo"
+  },
+  {
+    "id": "ag_direct_call_02",
+    "prompt": "Trɔ CFA 50000 yi Euro nam.",
+    "eval_method": "format",
+    "expected_format": {"contains_function_call": true},
+    "description": "Appel direct — conversion devises"
+  },
+  {
+    "id": "ag_direct_call_03",
+    "prompt": "Di 'Ewe language history' le internet dzi nam.",
+    "eval_method": "format",
+    "expected_format": {"contains_function_call": true},
+    "description": "Appel direct — recherche web"
+  },
+  {
+    "id": "ag_clarification_01",
+    "prompt": "Dɔ email aɖe nam.",
+    "eval_method": "composite",
+    "expected_keywords": ["email", "ameka", "?"],
+    "expected_format": {"contains_ewe": true, "min_length": 20},
+    "description": "Clarification — paramètres manquants"
+  },
+  {
+    "id": "ag_clarification_02",
+    "prompt": "Book flight nam.",
+    "eval_method": "composite",
+    "expected_keywords": ["?"],
+    "expected_format": {"contains_ewe": true, "min_length": 20},
+    "description": "Clarification — réservation incomplète"
+  },
+  {
+    "id": "ag_no_tool_01",
+    "prompt": "Gblɔ lolo aɖe nam le Ewe me.",
+    "eval_method": "composite",
+    "expected_keywords": [],
+    "expected_format": {"contains_ewe": true, "min_length": 50},
+    "description": "Pas d'outil — création littéraire"
+  },
+  {
+    "id": "ag_no_tool_02",
+    "prompt": "Ðo gɔme nam alesi míaɖo asi nkeke-sia-nkeke ƒe dɔwo ŋu nyuie.",
+    "eval_method": "composite",
+    "expected_keywords": [],
+    "expected_format": {"contains_ewe": true, "min_length": 100},
+    "description": "Pas d'outil — conseil de vie"
+  },
+  {
+    "id": "ag_chain_01",
+    "messages": [
+      {"role": "system", "content": "Tu es Yawo, un assistant IA qui répond en Ewe. Tu as accès aux outils: get_weather, convert_currency, send_email, web_search, set_reminder."},
+      {"role": "user", "content": "Kpɔ weather le Lomé eye ne hotness wu 35° la, set reminder nam be mana tsi geɖe."}
+    ],
+    "eval_method": "format",
+    "expected_format": {"contains_function_call": true},
+    "description": "Chaînage conditionnel — météo puis rappel"
+  },
+  {
+    "id": "ag_result_handling_01",
+    "messages": [
+      {"role": "system", "content": "Tu es Yawo, un assistant IA qui répond en Ewe. Tu as accès aux outils."},
+      {"role": "user", "content": "Kpɔ weather le Accra nam."},
+      {"role": "assistant", "content": "<function_call>{\"name\": \"get_weather\", \"arguments\": {\"location\": \"Accra\"}}</function_call>"},
+      {"role": "function", "content": "{\"temperature\": 32, \"humidity\": 78, \"condition\": \"partly_cloudy\", \"wind\": \"12 km/h\"}"},
+      {"role": "user", "content": "Akpe. Ðo result la gɔme nam le Ewe me."}
+    ],
+    "eval_method": "composite",
+    "expected_keywords": ["32", "Accra"],
+    "expected_format": {"contains_ewe": true, "min_length": 40},
+    "description": "Interprétation de résultat d'outil"
+  },
+  {
+    "id": "ag_format_correct_01",
+    "prompt": "Set reminder: 'Ði dɔ meeting' le 14:00 nam.",
+    "eval_method": "format",
+    "expected_format": {"contains_function_call": true},
+    "description": "Format function_call correct avec tags XML"
+  }
+]

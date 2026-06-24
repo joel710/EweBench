@@ -1,0 +1,91 @@
+[
+  {
+    "id": "rs_logic_01",
+    "prompt": "Kofi lolo wu Ama. Ama lolo wu Koffi. Ameka nye ga le ame etɔ̃ sia me? Dɔ ɖe eŋu le Ewe me.",
+    "eval_method": "keywords",
+    "expected_keywords": ["Kofi"],
+    "description": "Raisonnement transitif simple"
+  },
+  {
+    "id": "rs_logic_02",
+    "prompt": "Avuwo katã nya ŋu nɔ. Beni nye avu. Àté ŋu agblɔ be Beni nya ŋu nɔ a? Ðo ɖe eŋu le Ewe me.",
+    "eval_method": "keywords",
+    "expected_keywords": ["ɛ", "nɔ", "Beni"],
+    "description": "Syllogisme logique"
+  },
+  {
+    "id": "rs_math_01",
+    "prompt": "Kofi ɖo ga CFA 5000. Eƒle nuku si xɔ CFA 1500. Eƒle agbalẽ si xɔ CFA 2000. Ga nenie ka la ɖo esi ne? Ðo ɖe eŋu le Ewe me.",
+    "eval_method": "keywords",
+    "expected_keywords": ["1500"],
+    "description": "Problème arithmétique en contexte"
+  },
+  {
+    "id": "rs_math_02",
+    "prompt": "Ama ɖo koklo 12. Etsɔ eƒe enu-eta nà Kofi. Ega etsɔ enu-eve le esi kɔ̃ la na Yao. Koklo nenie ka la ɖo esi ne? Dɔ ɖe eŋu le Ewe me.",
+    "eval_method": "keywords",
+    "expected_keywords": ["4"],
+    "description": "Problème de fractions en contexte"
+  },
+  {
+    "id": "rs_causal_01",
+    "prompt": "Ne tsi dza la, mɔwo gblẽa. Ne mɔwo gblẽ la, lɔriwo mate ŋu ayi gbɔtɔgbɔtɔ o. Egbe tsi dza. Nuka va ɖo? Ðo ɖe eŋu le Ewe me.",
+    "eval_method": "keywords",
+    "expected_keywords": ["lɔri", "mɔ"],
+    "description": "Raisonnement causal — chaîne d'implications"
+  },
+  {
+    "id": "rs_analogy_01",
+    "prompt": "Ti kpɔɖeŋu sia ƒe nya si gɔ̃ ɖoe: 'Ga nye ɖe ame nu abe tsi nye ɖe ati nu ene.' — Nuka ƒe gɔmesese le esia me? Ðo ɖe eŋu le Ewe me.",
+    "eval_method": "composite",
+    "expected_keywords": ["ga", "tsi", "ati"],
+    "expected_format": {"contains_ewe": true, "min_length": 50},
+    "description": "Compréhension d'analogie"
+  },
+  {
+    "id": "rs_riddle_01",
+    "prompt": "Adzo sia: 'Mele yiyim gake mele teƒe ɖeka. Menye ame o, menye nu o, gake nye nusiawo katã. Nuka nye mi?' Ðo ɖe eŋu le Ewe me.",
+    "eval_method": "composite",
+    "expected_keywords": [],
+    "expected_format": {"contains_ewe": true, "min_length": 30},
+    "description": "Résolution d'énigme"
+  },
+  {
+    "id": "rs_sequence_01",
+    "prompt": "Kpɔ xexlẽdzesi siawo: 2, 6, 12, 20, 30, ... Xexlẽdzesi si kplɔa edzi nka? Ðo ɖe eŋu le Ewe me.",
+    "eval_method": "keywords",
+    "expected_keywords": ["42"],
+    "description": "Suite logique numérique"
+  },
+  {
+    "id": "rs_deduction_01",
+    "prompt": "Le xɔ me la, ame enyi nɔ anyi. Tɔgbui Kofi nɔ anyi le Ama ƒe mɔxenyigba la dzi. Yao nɔ anyi le Kofi kple Esi dome. Ameka nɔ anyi le Yao ƒe dusime? Ðo ɖe eŋu le Ewe me.",
+    "eval_method": "composite",
+    "expected_keywords": ["Esi"],
+    "expected_format": {"contains_ewe": true, "min_length": 40},
+    "description": "Déduction spatiale"
+  },
+  {
+    "id": "rs_planning_01",
+    "prompt": "Kofi ɖo dɔ etɔ̃ si wòle be yeawɔ egbe: yi banke, ƒle nu le asi me, eye wòaɖo mɔtrɔ ayi dɔ. Banke la ɖe ŋkugbe na nkukuɖeha 9:00 kple 12:00 dome ko. Asi la ɖe ŋkugbe le 8:00 yi 18:00. Dɔ la dze gɔme le 14:00. Le ɖoɖo nyuitɔ mɔ̃ ka me Kofi nawɔ dɔ siawo? Ðo ɖe eŋu le Ewe me.",
+    "eval_method": "composite",
+    "expected_keywords": ["banke", "asi", "dɔ"],
+    "expected_format": {"contains_ewe": true, "min_length": 80},
+    "description": "Planification et optimisation d'emploi du temps"
+  },
+  {
+    "id": "rs_contradiction_01",
+    "prompt": "Amea ɖe gblɔ be: 'Nye meɖo ŋusẽ ɖe nya aɖeke ŋu o.' Nya sia dze ɖeka a? Nuka ta? Ðo ɖe eŋu le Ewe me.",
+    "eval_method": "composite",
+    "expected_keywords": [],
+    "expected_format": {"contains_ewe": true, "min_length": 50},
+    "description": "Détection de paradoxe/contradiction"
+  },
+  {
+    "id": "rs_probability_01",
+    "prompt": "Le ga (coin) aɖe ƒeƒe zia 3 me la, ne ta (heads) tɔ va zi 3 katã la, eƒe gɔ̃medzedze ɖe alea ka? Ðo ɖe eŋu le Ewe me.",
+    "eval_method": "keywords",
+    "expected_keywords": ["1/8", "12.5"],
+    "description": "Raisonnement probabiliste"
+  }
+]

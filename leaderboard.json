@@ -1,0 +1,24 @@
+{
+  "benchmark": "ÈwéBench",
+  "version": "1.0.0",
+  "description": "Benchmark de référence pour l'évaluation de LLMs en langue Ewe",
+  "categories": [
+    "linguistic_comprehension",
+    "text_generation",
+    "reasoning",
+    "translation",
+    "cultural_knowledge",
+    "instruction_following",
+    "multi_turn",
+    "agentic",
+    "style_adaptation",
+    "robustness"
+  ],
+  "total_tests": 97,
+  "scoring": {
+    "method": "weighted_average",
+    "max_score": 100,
+    "passing_threshold": 70
+  },
+  "entries": []
+}

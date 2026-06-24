@@ -1,0 +1,82 @@
+[
+  {
+    "id": "ck_proverb_01",
+    "prompt": "Ðo nyagbe sia gɔme le Ewe me: 'Ðevi si manya asi klé o la, mɔ aɖe le eƒe nukpɔkpɔ me'",
+    "eval_method": "composite",
+    "expected_keywords": ["ɖevi", "asi"],
+    "expected_format": {"contains_ewe": true, "min_length": 40},
+    "description": "Explication de proverbe Ewe"
+  },
+  {
+    "id": "ck_proverb_02",
+    "prompt": "Na nyagbe Ewe 5 siwo fia nyateƒe tso dɔ-wɔwɔ sesẽ ŋu. Ðo ɖeka-ɖeka ƒe gɔmesese gɔme.",
+    "eval_method": "composite",
+    "expected_keywords": [],
+    "expected_format": {"contains_ewe": true, "min_length": 200},
+    "description": "Liste de proverbes avec explications"
+  },
+  {
+    "id": "ck_history_01",
+    "prompt": "Gblɔ Ewe-dukowo ƒe ɖoɖo le Notsie ƒe megbe ŋu le Ewe me. Nuka dzɔ eye aleke wotso Notsie la?",
+    "eval_method": "composite",
+    "expected_keywords": ["Notsie", "Agokoli"],
+    "expected_format": {"contains_ewe": true, "min_length": 100},
+    "description": "Histoire — migration depuis Notsie"
+  },
+  {
+    "id": "ck_history_02",
+    "prompt": "Ameka nye Togbe Tsali? Aleke wòwɔ dɔ na Ewe-dukowo? Ðo ɖe eŋu le Ewe me.",
+    "eval_method": "composite",
+    "expected_keywords": ["Tsali"],
+    "expected_format": {"contains_ewe": true, "min_length": 80},
+    "description": "Personnage historique Ewe"
+  },
+  {
+    "id": "ck_tradition_01",
+    "prompt": "Ðo Agbadza ƒe ɖoɖo gɔme le Ewe me. Afi ka wowɔa, nuka ta, eye aleke ƒe atamga le eme?",
+    "eval_method": "composite",
+    "expected_keywords": ["Agbadza", "ha"],
+    "expected_format": {"contains_ewe": true, "min_length": 100},
+    "description": "Danse traditionnelle — Agbadza"
+  },
+  {
+    "id": "ck_tradition_02",
+    "prompt": "Gblɔ nusiawo dzi si wowɔa le 'Hogbetsotso' ƒe dzɔdzɔme me le Ewe me.",
+    "eval_method": "composite",
+    "expected_keywords": ["Hogbetsotso", "Notsie"],
+    "expected_format": {"contains_ewe": true, "min_length": 100},
+    "description": "Festival — Hogbetsotso"
+  },
+  {
+    "id": "ck_food_01",
+    "prompt": "Gblɔ nududu 5 siwo nye Ewe-tɔwo ƒe nududu dzidzemetɔwo eye nàɖo ɖeka-ɖeka ƒe dɔwɔɖi gɔme kpui ɖe.",
+    "eval_method": "composite",
+    "expected_keywords": ["fufu", "akple"],
+    "expected_format": {"contains_ewe": true, "min_length": 150},
+    "description": "Cuisine traditionnelle Ewe"
+  },
+  {
+    "id": "ck_naming_01",
+    "prompt": "Le Ewe ƒe ɖoɖo me la, aleke wona ŋkɔ ɖeviwo? Nuka nye ŋkɔ-nana ƒe gɔmesese? Na kpɔɖeŋu aɖewo.",
+    "eval_method": "composite",
+    "expected_keywords": ["ŋkɔ", "ɖevi", "dzɔ"],
+    "expected_format": {"contains_ewe": true, "min_length": 100},
+    "description": "Traditions de nomination"
+  },
+  {
+    "id": "ck_music_01",
+    "prompt": "Gblɔ Ewe ƒe hawo ƒe xɔxɔ ŋu. Hadziɖoɖowo sɔ kpɔɖeŋu enyi na m eye nàɖo wo ƒe tɔtrɔ gɔme.",
+    "eval_method": "composite",
+    "expected_keywords": ["ha", "vu"],
+    "expected_format": {"contains_ewe": true, "min_length": 120},
+    "description": "Musique et rythmes traditionnels"
+  },
+  {
+    "id": "ck_religion_01",
+    "prompt": "Ðo Mawu-susu le Eweawo ƒe nɔnɔme xɔxɔ me gɔme. Aleke wosusu nusianusiwo ŋu?",
+    "eval_method": "composite",
+    "expected_keywords": ["Mawu", "trɔ"],
+    "expected_format": {"contains_ewe": true, "min_length": 100},
+    "description": "Spiritualité traditionnelle Ewe"
+  }
+]

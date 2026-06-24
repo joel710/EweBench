@@ -1,0 +1,65 @@
+[
+  {
+    "id": "sa_formal_01",
+    "prompt": "Le ɖoɖo nyuitɔ ŋutɔ me (abe leta yi president ene), ŋlɔ biabia aɖe be woana mɔ na sukuu yeye ɖe wò ƒe tokɔ me. Le Ewe me.",
+    "eval_method": "composite",
+    "expected_keywords": ["sukuu"],
+    "expected_format": {"contains_ewe": true, "min_length": 150},
+    "description": "Style formel — lettre officielle"
+  },
+  {
+    "id": "sa_informal_01",
+    "prompt": "Ŋlɔ message kpui aɖe yi wò xɔlɔ̃ be nàva wò ƒe party me. Nanɔ abe gbɔ̃gbe-nya ene kpátó — abe text message ene.",
+    "eval_method": "composite",
+    "expected_keywords": [],
+    "expected_format": {"contains_ewe": true, "min_length": 30, "max_length": 300},
+    "description": "Style informel — invitation entre amis"
+  },
+  {
+    "id": "sa_technical_01",
+    "prompt": "Ðo alesi internet ƒe routing dɔwɔa gɔme le ɖoɖo technical me. Zã termes siwo sɔ kple domain la.",
+    "eval_method": "composite",
+    "expected_keywords": ["IP", "router", "packet"],
+    "expected_format": {"contains_ewe": true, "min_length": 100},
+    "description": "Style technique — explication réseau"
+  },
+  {
+    "id": "sa_simple_01",
+    "prompt": "Ðo alesi internet dɔwɔa gɔme na ɖevi si le ŋkeke 8 me. Zã nya kpuiwo kple kpɔɖeŋu kasiamee.",
+    "eval_method": "composite",
+    "expected_keywords": [],
+    "expected_format": {"contains_ewe": true, "min_length": 80},
+    "description": "Style simplifié — explication pour enfant"
+  },
+  {
+    "id": "sa_narrative_01",
+    "prompt": "Gblɔ story kpui aɖe le Ewe me tso ɖevi si yi dzɔdzɔme gã aɖe dzi ŋu. Zã narrative style — description suetɔe.",
+    "eval_method": "ewe_quality",
+    "expected_format": {"contains_ewe": true, "min_length": 200},
+    "description": "Style narratif — histoire"
+  },
+  {
+    "id": "sa_debate_01",
+    "prompt": "Wɔ abe debater aɖe ene eye nàɖe mɔ̃ɖe be 'technology nyoa na Afrika wu esi wòwɔa vevesẽ na'. Tsɔ arguments kple preuves. Le Ewe me.",
+    "eval_method": "composite",
+    "expected_keywords": ["technology", "Afrika"],
+    "expected_format": {"contains_ewe": true, "min_length": 150},
+    "description": "Style débat — argumentation"
+  },
+  {
+    "id": "sa_humorous_01",
+    "prompt": "Gblɔ lolo (joke) eve-etɔ̃ le Ewe me siwo na dzidzi ame. Eye nàɖo gɔme ɖe hã ne ame aɖe mesee o.",
+    "eval_method": "composite",
+    "expected_keywords": [],
+    "expected_format": {"contains_ewe": true, "min_length": 80},
+    "description": "Style humoristique"
+  },
+  {
+    "id": "sa_academic_01",
+    "prompt": "Ŋlɔ paragraph aɖe le academic style me tso 'gbe ƒe ɖoɖo le digital ŋkeke me' ŋu. Zã ɖoɖo si sɔ kple research paper.",
+    "eval_method": "composite",
+    "expected_keywords": ["gbe", "digital"],
+    "expected_format": {"contains_ewe": true, "min_length": 120},
+    "description": "Style académique"
+  }
+]

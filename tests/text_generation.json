@@ -1,0 +1,95 @@
+[
+  {
+    "id": "tg_fluency_01",
+    "prompt": "Ŋlɔ nuŋlɔɖi kpui aɖe (lignes 5-8) tso Lomé ƒe nkeke gbãtɔ le Ghana ƒe ɖoɖo megbe ŋu.",
+    "eval_method": "composite",
+    "expected_keywords": ["Lomé"],
+    "expected_format": {"contains_ewe": true, "min_length": 150},
+    "description": "Génération de texte narratif fluide"
+  },
+  {
+    "id": "tg_fluency_02",
+    "prompt": "Ŋlɔ ŋkɔnya kpui aɖe tso 'dzɔdzɔme ɖe nyateƒe' ŋu le Ewe me. A ɖo alea 100 nenia.",
+    "eval_method": "ewe_quality",
+    "expected_format": {"contains_ewe": true, "min_length": 200},
+    "description": "Génération d'essai court — thème philosophique"
+  },
+  {
+    "id": "tg_coherence_01",
+    "prompt": "Dze gɔme: 'Gbɔ̃gbe aɖe, ɖevia va aƒe tso sukuu eye...' — Kpɔ ɖe ŋu bena story la nà nɔ edzi.",
+    "eval_method": "composite",
+    "expected_keywords": ["ɖevi", "sukuu"],
+    "expected_format": {"contains_ewe": true, "min_length": 200},
+    "description": "Continuation cohérente d'une histoire"
+  },
+  {
+    "id": "tg_creative_01",
+    "prompt": "Ŋlɔ ha (poème) aɖe le Ewe me tso 'dzɔdzɔme ƒe ŋɔsese' ŋu. Zã gɔmesese suetɔe kple dzɔdzɔme ŋuti nyawo.",
+    "eval_method": "composite",
+    "expected_keywords": [],
+    "expected_format": {"contains_ewe": true, "min_length": 100},
+    "description": "Création poétique en Ewe"
+  },
+  {
+    "id": "tg_creative_02",
+    "prompt": "Ŋlɔ ha kpui aɖe na viwo le Ewe me. Èna bena wóa kpɔ dzidzɔ.",
+    "eval_method": "ewe_quality",
+    "expected_format": {"contains_ewe": true, "min_length": 80},
+    "description": "Chanson pour enfants en Ewe"
+  },
+  {
+    "id": "tg_dialogue_01",
+    "prompt": "Ŋlɔ nyamedzɔdzɔ le ame eve dome — nɔvia kple nɔvianyɔnu — le asi dzi. Woƒe nyaɖoɖo nanɔ abe gbɔ̃gbe ene.",
+    "eval_method": "composite",
+    "expected_keywords": [],
+    "expected_format": {"contains_ewe": true, "min_length": 200},
+    "description": "Génération de dialogue naturel"
+  },
+  {
+    "id": "tg_formal_01",
+    "prompt": "Ŋlɔ leta aɖe yi togbui dzi abe ɖoɖo nyuitɔ ene. Dze gɔme kple àkpe-dada eye nàdo gɔme nusɔ̃nu la.",
+    "eval_method": "composite",
+    "expected_keywords": ["akpe", "togbui"],
+    "expected_format": {"contains_ewe": true, "min_length": 150},
+    "description": "Texte formel — lettre respectueuse"
+  },
+  {
+    "id": "tg_instruction_01",
+    "prompt": "Ŋlɔ alesi woawɔ fufu le dɔwɔɖi me. Na step-by-step le Ewe me.",
+    "eval_method": "composite",
+    "expected_keywords": ["fufu"],
+    "expected_format": {"contains_ewe": true, "min_length": 150},
+    "description": "Génération d'instructions — recette"
+  },
+  {
+    "id": "tg_summary_01",
+    "prompt": "Tso nya kpui sia gɔme: 'Le Ghana kple Togo dome la, Ewe-dukowo nɔ anyi le anyigba si le aƒedomekpa la dzi. Woƒe gbe nye Ewe gbe, si nye Kwa gbewo dometɔ aɖe. Ame million 7 dzi ƒo gbe sia le Afrika ƒe teƒe vovo me.'",
+    "eval_method": "composite",
+    "expected_keywords": ["Ewe", "gbe"],
+    "expected_format": {"contains_ewe": true, "min_length": 50},
+    "description": "Résumé de texte en Ewe"
+  },
+  {
+    "id": "tg_persuasive_01",
+    "prompt": "Ŋlɔ nuŋlɔɖi aɖe si doa ɖi na amewo bena woasrɔ̃ woƒe anyigba. Zã nyagbe suetɔe le Ewe me.",
+    "eval_method": "ewe_quality",
+    "expected_format": {"contains_ewe": true, "min_length": 150},
+    "description": "Texte persuasif — protection de l'environnement"
+  },
+  {
+    "id": "tg_news_01",
+    "prompt": "Ŋlɔ nutatanya (news article) kpui aɖe tso sukuu yeye si wotu le Lomé ŋu. Zã nutatanya ƒe ɖoɖo.",
+    "eval_method": "composite",
+    "expected_keywords": ["Lomé", "sukuu"],
+    "expected_format": {"contains_ewe": true, "min_length": 120},
+    "description": "Génération d'article de presse"
+  },
+  {
+    "id": "tg_explain_01",
+    "prompt": "Ðo internet ƒe dɔwɔwɔ gɔme ɖe ame si mesea nu ɖe esia ŋu o la. Zã Ewe gbe kple kpɔɖeŋu kasiamee.",
+    "eval_method": "composite",
+    "expected_keywords": ["internet"],
+    "expected_format": {"contains_ewe": true, "min_length": 150},
+    "description": "Explication simple d'un concept technique"
+  }
+]

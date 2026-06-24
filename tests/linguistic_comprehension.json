@@ -1,0 +1,119 @@
+[
+  {
+    "id": "lc_grammar_01",
+    "prompt": "Asɔnu sia ƒe dɔwɔwɔ sɔ gbɔ le Ewe me: 'Kofi yi sukuu' — Sɔ kɔ ƒe tanya le eŋu: Ameka yi sukuu?",
+    "eval_method": "keywords",
+    "expected_keywords": ["Kofi"],
+    "description": "Compréhension de sujet — qui fait l'action"
+  },
+  {
+    "id": "lc_grammar_02",
+    "prompt": "Ðo gomekpɔkpɔ na nya sia: 'Ama ɖu nu eye wò nɔ anyi'. Nya nenie ɖe eme?",
+    "eval_method": "keywords",
+    "expected_keywords": ["ɖu", "nu", "nɔ", "anyi"],
+    "description": "Analyse grammaticale de phrase complexe"
+  },
+  {
+    "id": "lc_grammar_03",
+    "prompt": "Le Ewe me, nuka ƒe tɔtrɔ nye 'me-' le dɔwɔwɔ ƒe dzi? Tsɔ kpɔɖeŋu aɖe na m.",
+    "eval_method": "composite",
+    "expected_keywords": ["me", "negation", "mey"],
+    "expected_format": {"contains_ewe": true, "min_length": 50},
+    "description": "Compréhension du préfixe négatif"
+  },
+  {
+    "id": "lc_vocabulary_01",
+    "prompt": "Gblɔ nyagbe sia ƒe gɔmesese le Ewe me: 'Ati aɖe me wɔa ave o'",
+    "eval_method": "composite",
+    "expected_keywords": ["ati", "ave"],
+    "expected_format": {"contains_ewe": true, "min_length": 30},
+    "description": "Compréhension de proverbe Ewe"
+  },
+  {
+    "id": "lc_vocabulary_02",
+    "prompt": "Na nya evelia (synonyme) na nya Ewe siawo: 1) deka 2) nyuie 3) zoo 4) fia 5) vi",
+    "eval_method": "composite",
+    "expected_keywords": ["ɖeka", "nyui"],
+    "expected_format": {"contains_ewe": true, "min_length": 40},
+    "description": "Vocabulaire — synonymes en Ewe"
+  },
+  {
+    "id": "lc_tone_01",
+    "prompt": "Le Ewe me, gbɔgblɔ 'to' ƒe gɔmesese vɔ le tɔ́ (high tone) kple tò (low tone) dome. Ðo sia gɔme.",
+    "eval_method": "composite",
+    "expected_keywords": ["to"],
+    "expected_format": {"contains_ewe": true, "min_length": 60},
+    "description": "Distinction tonale — signification selon le ton"
+  },
+  {
+    "id": "lc_morphology_01",
+    "prompt": "Trɔ nya sia yi zuzu: 'Kofi le agble me' → zuzu ƒe nyaŋuɖoɖo",
+    "eval_method": "composite",
+    "expected_keywords": ["Kofi"],
+    "expected_format": {"contains_ewe": true, "min_length": 20},
+    "description": "Morphologie — transformation de phrase"
+  },
+  {
+    "id": "lc_grammar_04",
+    "prompt": "Tia nyawo le ɖoɖo nyuitɔ me:\na) nu / Ama / ɖu\nb) sukuu / yi / Kofi / le",
+    "eval_method": "keywords",
+    "expected_keywords": ["Ama ɖu nu", "Kofi le sukuu"],
+    "description": "Ordre des mots — reconstruction de phrases"
+  },
+  {
+    "id": "lc_plural_01",
+    "prompt": "Trɔ nyawo yi dzi-wo-me: 1) ame 2) ɖevi 3) ati 4) xɔ 5) avu",
+    "eval_method": "composite",
+    "expected_keywords": ["ame", "wo"],
+    "expected_format": {"contains_ewe": true, "min_length": 30},
+    "description": "Formation du pluriel en Ewe"
+  },
+  {
+    "id": "lc_postposition_01",
+    "prompt": "Le Ewe me, gblɔ nɔƒe-nyawo siawo ƒe tɔtrɔ: 'dzi', 'me', 'nu', 'te', 'megbe'. Na kpɔɖeŋu ɖeka-ɖeka.",
+    "eval_method": "composite",
+    "expected_keywords": ["dzi", "me", "nu"],
+    "expected_format": {"contains_ewe": true, "min_length": 80},
+    "description": "Postpositions locatives en Ewe"
+  },
+  {
+    "id": "lc_serial_verb_01",
+    "prompt": "Nya sia 'Kofi ɖo ati tsɔ ná Ama' — dɔwɔwɔ nenie le eme? Ðo dɔwɔwɔ-gbɔsɔsɔ (serial verb) sia gɔme.",
+    "eval_method": "composite",
+    "expected_keywords": ["ɖo", "tsɔ"],
+    "expected_format": {"contains_ewe": true, "min_length": 50},
+    "description": "Compréhension des verbes sériels"
+  },
+  {
+    "id": "lc_aspect_01",
+    "prompt": "Ðo tɔtrɔ le 'progressive' kple 'habitual' dome le Ewe me. Na kpɔɖeŋu: 'Kofi le nu ɖum' vs 'Kofi ɖua nu'",
+    "eval_method": "composite",
+    "expected_keywords": ["le", "ɖu", "progressive", "habitual"],
+    "expected_format": {"contains_ewe": true, "min_length": 60},
+    "description": "Aspects verbaux — progressif vs habituel"
+  },
+  {
+    "id": "lc_question_formation_01",
+    "prompt": "Trɔ nyawo yi biabia-nya: 1) 'Kofi yi Lomé' 2) 'Ama ɖu fufu' 3) 'Ðeviwo le kpam'",
+    "eval_method": "composite",
+    "expected_keywords": ["ka", "?"],
+    "expected_format": {"contains_ewe": true, "min_length": 40},
+    "description": "Formation de questions"
+  },
+  {
+    "id": "lc_relative_clause_01",
+    "prompt": "Tso nyagbe sia ƒe structure gɔme: 'Ame si yi sukuu la va aƒe'. Afi ka 'si' le dɔ wɔm le nya sia me?",
+    "eval_method": "composite",
+    "expected_keywords": ["si", "relative"],
+    "expected_format": {"contains_ewe": true, "min_length": 40},
+    "description": "Propositions relatives avec 'si'"
+  },
+  {
+    "id": "lc_numeral_01",
+    "prompt": "Xlẽ xexlẽdzesiwo le Ewe me: 17, 23, 45, 68, 99, 156",
+    "eval_method": "composite",
+    "expected_keywords": ["asieke", "bla"],
+    "expected_format": {"contains_ewe": true, "min_length": 40},
+    "description": "Système numéral Ewe"
+  }
+]

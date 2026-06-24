@@ -1,0 +1,95 @@
+[
+  {
+    "id": "tr_fr_ewe_01",
+    "prompt": "Ðɔ nya sia yi Ewe me: 'Bonjour, comment allez-vous aujourd'hui?'",
+    "eval_method": "composite",
+    "expected_keywords": ["ŋdi", "nɛ"],
+    "expected_format": {"contains_ewe": true, "min_length": 10},
+    "description": "FR→Ewe: salutation simple"
+  },
+  {
+    "id": "tr_fr_ewe_02",
+    "prompt": "Ðɔ nya sia yi Ewe me: 'Le marché est très animé le samedi matin. Les femmes vendent des légumes frais et du poisson.'",
+    "eval_method": "composite",
+    "expected_keywords": ["asi", "nyi"],
+    "expected_format": {"contains_ewe": true, "min_length": 30},
+    "description": "FR→Ewe: description de marché"
+  },
+  {
+    "id": "tr_fr_ewe_03",
+    "prompt": "Ðɔ nya sia yi Ewe me: 'L'éducation est la clé du développement. Chaque enfant mérite d'aller à l'école.'",
+    "eval_method": "composite",
+    "expected_keywords": ["sukuu", "ɖevi"],
+    "expected_format": {"contains_ewe": true, "min_length": 30},
+    "description": "FR→Ewe: thème éducatif"
+  },
+  {
+    "id": "tr_ewe_fr_01",
+    "prompt": "Ðɔ nya sia yi Français me: 'Fifia nye ɣeyiɣi nyui aɖe be míaɖo asi dɔ la gɔme. Ame sia ame nava kple eƒe dɔwɔnuwo.'",
+    "eval_method": "keywords",
+    "expected_keywords": ["moment", "travail", "outils"],
+    "description": "Ewe→FR: instruction de travail"
+  },
+  {
+    "id": "tr_ewe_fr_02",
+    "prompt": "Ðɔ nya sia yi Français me: 'Togbe Agbogbo nye mía togbuiwo ƒe nɔviwo. Wole Afrika ƒe nutikuku me azɔ kple azɔ.'",
+    "eval_method": "keywords",
+    "expected_keywords": ["ancêtres", "Afrique", "toujours"],
+    "description": "Ewe→FR: thème culturel"
+  },
+  {
+    "id": "tr_en_ewe_01",
+    "prompt": "Translate to Ewe: 'The children are playing in the field. They are happy because school is over.'",
+    "eval_method": "composite",
+    "expected_keywords": ["ɖevi", "sukuu"],
+    "expected_format": {"contains_ewe": true, "min_length": 20},
+    "description": "EN→Ewe: scène quotidienne"
+  },
+  {
+    "id": "tr_en_ewe_02",
+    "prompt": "Translate to Ewe: 'Technology is changing the world rapidly. We must adapt to new innovations.'",
+    "eval_method": "composite",
+    "expected_keywords": [],
+    "expected_format": {"contains_ewe": true, "min_length": 20},
+    "description": "EN→Ewe: thème technologique"
+  },
+  {
+    "id": "tr_ewe_en_01",
+    "prompt": "Translate to English: 'Mía dukɔ ƒe nɔnɔme le dzi yim ɖe nyuie me. Susu yeye kple dɔwɔwɔ yeye le va ɖem.'",
+    "eval_method": "keywords",
+    "expected_keywords": ["nation", "progress", "new"],
+    "description": "Ewe→EN: thème développement"
+  },
+  {
+    "id": "tr_idiom_01",
+    "prompt": "Ðɔ nyagbe sia yi Français me eye nàɖe eƒe gɔmesese gɔme: 'Ðe medea ŋgɔ ƒe alɔ o la, megbea nye eƒe'",
+    "eval_method": "composite",
+    "expected_keywords": ["main", "devant"],
+    "expected_format": {"min_length": 50},
+    "description": "Traduction idiomatique + explication"
+  },
+  {
+    "id": "tr_technical_01",
+    "prompt": "Ðɔ nya sia yi Ewe me (domaine médical): 'Le patient présente une fièvre élevée, des maux de tête et une fatigue générale. Il faut faire des analyses de sang.'",
+    "eval_method": "composite",
+    "expected_keywords": ["dɔ", "ta"],
+    "expected_format": {"contains_ewe": true, "min_length": 30},
+    "description": "FR→Ewe: vocabulaire médical"
+  },
+  {
+    "id": "tr_preserve_meaning_01",
+    "prompt": "Ðɔ nya sia yi Ewe me bena gɔmesese la nanɔ abe esi ene — mègatro gblɔe tɔ-kɔtɔ-kɔtɔ o: 'Malgré les difficultés, notre peuple reste uni et fort. C'est notre diversité qui fait notre richesse.'",
+    "eval_method": "composite",
+    "expected_keywords": [],
+    "expected_format": {"contains_ewe": true, "min_length": 40},
+    "description": "Traduction préservant le sens profond"
+  },
+  {
+    "id": "tr_register_01",
+    "prompt": "Ðɔ nya ɖeka sia yi Ewe me le ɖoɖo eve me — (1) gbɔ̃gbe-nya (langage familier) kple (2) ɖoɖo nyuitɔ (formel): 'Viens manger, la nourriture est prête.'",
+    "eval_method": "composite",
+    "expected_keywords": ["va", "nu"],
+    "expected_format": {"contains_ewe": true, "min_length": 30},
+    "description": "Traduction multi-registre"
+  }
+]
