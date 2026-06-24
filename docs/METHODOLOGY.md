@@ -1,4 +1,4 @@
-# ÈwéBench — Scoring Methodology
+# ÈwéBench   Scoring Methodology
 
 [English](#english) • [Français](#français)
 
@@ -62,10 +62,10 @@ Used for QCM-style tests with A/B/C/D options.
 
 #### 4. Format Compliance (`format`)
 Checks multiple format criteria:
-- `contains_ewe` — Response has Ewe characters (ɖ, ɛ, ɔ, ƒ, ŋ, ɣ)
-- `min_length` / `max_length` — Response length bounds
-- `contains_function_call` — Has `<function_call>` tag
-- `markdown_elements` — Has tables, headers, lists, bold
+- `contains_ewe`   Response has Ewe characters (ɖ, ɛ, ɔ, ƒ, ŋ, ɣ)
+- `min_length` / `max_length`   Response length bounds
+- `contains_function_call`   Has `<function_call>` tag
+- `markdown_elements`   Has tables, headers, lists, bold
 
 #### 5. Ewe Quality Heuristic (`ewe_quality`)
 Composite heuristic scoring:
@@ -138,9 +138,9 @@ score_catégorie = (somme des scores de tests / nombre de tests) × 100
 
 ## Known Limitations
 
-1. **Ewe quality heuristic** is rule-based, not learned — it can miss valid Ewe or reward superficial patterns
+1. **Ewe quality heuristic** is rule-based, not learned   it can miss valid Ewe or reward superficial patterns
 2. **Keyword matching** doesn't account for synonyms or paraphrasing
-3. **No human evaluation** in automated runs — ÈwéScore is an approximation
+3. **No human evaluation** in automated runs   ÈwéScore is an approximation
 4. **Tonal accuracy** cannot be verified in written text (Ewe is tonal but rarely written with tone marks)
 
 These limitations are documented so users interpret scores with appropriate context. We plan to add human evaluation protocols in v2.0.
