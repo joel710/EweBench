@@ -21,7 +21,7 @@
 
 ### What is ÈwéBench?
 
-ÈwéBench is the **first standardized benchmark** for evaluating Large Language Models (LLMs) on the **Ewe language** (ɛʋɛgbɛ) — a Kwa language spoken by ~7 million people in Togo and Ghana.
+ÈwéBench is the **first standardized benchmark** for evaluating Large Language Models (LLMs) on the **Ewe language** (ɛʋɛgbɛ)   a Kwa language spoken by ~7 million people in Togo and Ghana.
 
 Unlike generic multilingual benchmarks that treat African languages as afterthoughts, ÈwéBench is **designed from the ground up** for Ewe, with culturally relevant tests, native speaker validation, and evaluation criteria that understand Ewe's unique linguistic features (tonality, agglutination, proverbs).
 
@@ -38,7 +38,7 @@ Unlike generic multilingual benchmarks that treat African languages as afterthou
 |---------|-------------|
 | **10 categories** | From linguistic comprehension to agentic capabilities |
 | **107 tests** | Manually crafted, culturally grounded |
-| **Weighted scoring** | ÈwéScore — single metric, weighted by category importance |
+| **Weighted scoring** | ÈwéScore   single metric, weighted by category importance |
 | **Any model** | Works with any OpenAI-compatible API (local or cloud) |
 | **CLI & API** | Run from terminal or integrate into CI/CD |
 | **Leaderboard** | Track and compare model progress |
@@ -84,7 +84,7 @@ python run_benchmark.py --leaderboard
 | 10 | Robustness | 10 | 5% | Consistency under adversarial inputs |
 | | **Total** | **107** | **100%** | |
 
-### Scoring — ÈwéScore
+### Scoring   ÈwéScore
 
 The **ÈwéScore** is a single number (0-100) representing overall Ewe language capability:
 
@@ -93,12 +93,12 @@ The **ÈwéScore** is a single number (0-100) representing overall Ewe language 
 ```
 
 Each test is scored 0.0-1.0 using evaluation methods:
-- **exact_match** — Normalized string comparison
-- **keywords** — Presence of expected Ewe keywords
-- **multiple_choice** — QCM answer detection
-- **format** — Output format compliance (markdown, function_call, etc.)
-- **ewe_quality** — Heuristic Ewe linguistic quality (character usage, vocabulary, structure)
-- **composite** — Weighted combination of multiple methods
+- **exact_match**   Normalized string comparison
+- **keywords**   Presence of expected Ewe keywords
+- **multiple_choice**   QCM answer detection
+- **format**   Output format compliance (markdown, function_call, etc.)
+- **ewe_quality**   Heuristic Ewe linguistic quality (character usage, vocabulary, structure)
+- **composite**   Weighted combination of multiple methods
 
 **Passing threshold**: A test is "passed" if score ≥ 0.7
 
@@ -140,7 +140,7 @@ POST /v1/chat/completions
 
 ### Qu'est-ce qu'ÈwéBench ?
 
-ÈwéBench est le **premier benchmark standardisé** pour évaluer les grands modèles de langage (LLMs) sur la **langue Ewe** (ɛʋɛgbɛ) — une langue Kwa parlée par ~7 millions de personnes au Togo et au Ghana.
+ÈwéBench est le **premier benchmark standardisé** pour évaluer les grands modèles de langage (LLMs) sur la **langue Ewe** (ɛʋɛgbɛ)   une langue Kwa parlée par ~7 millions de personnes au Togo et au Ghana.
 
 Contrairement aux benchmarks multilingues génériques qui traitent les langues africaines comme des détails, ÈwéBench est **conçu de zéro** pour l'Ewe, avec des tests culturellement pertinents, une validation par des locuteurs natifs, et des critères d'évaluation qui comprennent les particularités linguistiques de l'Ewe (tonalité, agglutination, proverbes).
 
@@ -161,22 +161,22 @@ cd EweBench
 # Installer les dépendances
 pip install -r requirements.txt
 
-# Configurer (optionnel — pour les presets cloud)
+# Configurer (optionnel   pour les presets cloud)
 cp .env.example .env
 # Ajouter vos clés API dans .env
 
 # Lancer avec un preset
-python run_benchmark.py --preset deepseek --verbose
+python run_benchmark.py --preset model --verbose
 
 # Lancer sur un modèle local
 python run_benchmark.py --endpoint http://localhost:11434/v1/chat/completions \
                         --model yawo-v10 --verbose
 
 # Évaluer une seule catégorie
-python run_benchmark.py --preset deepseek --category cultural_knowledge -v
+python run_benchmark.py --preset model --category cultural_knowledge -v
 
 # Comparer deux modèles
-python run_benchmark.py --compare results/deepseek.json results/yawo.json
+python run_benchmark.py --compare results/model.json results/yawo.json
 
 # Voir le classement
 python run_benchmark.py --leaderboard
@@ -198,7 +198,7 @@ python run_benchmark.py --leaderboard
 | 10 | Robustesse | 10 | 5% | Cohérence face aux entrées adverses |
 | | **Total** | **107** | **100%** | |
 
-### Scoring — ÈwéScore
+### Scoring   ÈwéScore
 
 L'**ÈwéScore** est un nombre unique (0-100) représentant la capacité globale en Ewe :
 
@@ -214,7 +214,7 @@ L'**ÈwéScore** est un nombre unique (0-100) représentant la capacité globale
 
 | # | Model | ÈwéScore | Tests Passed | Date |
 |---|-------|----------|--------------|------|
-| 🥇 | *En attente de soumissions* | — | — | — |
+| 🥇 | *En attente de soumissions* |  - |  - |  - |
 
 > **Soumettre vos résultats** : Exécutez le benchmark, puis ouvrez une PR avec votre fichier de résultats dans `results/`.
 
@@ -258,16 +258,16 @@ EweBench/
 We welcome contributions! See [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) for details.
 
 Ways to contribute:
-- **Add tests** — More tests improve coverage
-- **Validate translations** — Native speaker review
-- **Submit results** — Run on your model and share
-- **Report issues** — Found a bad test? Let us know
+- **Add tests**   More tests improve coverage
+- **Validate translations**   Native speaker review
+- **Submit results**   Run on your model and share
+- **Report issues**   Found a bad test? Let us know
 
 ---
 
 ## License
 
-**CC BY-NC 4.0** — Creative Commons Attribution-NonCommercial 4.0 International
+**CC BY-NC 4.0**   Creative Commons Attribution-NonCommercial 4.0 International
 
 - ✅ Free to use for research, education, and evaluation
 - ✅ Free to modify and redistribute (with attribution)
@@ -291,8 +291,8 @@ Ways to contribute:
 
 <div align="center">
 
-**Created by [Joel Elisée ADZONYA](https://joel.adzonya.strivenew.com) — [Strive AI](https://github.com/joel710)**
+**Created by [Joel Elisée ADZONYA](https://joel.adzonya.strivenew.com)   [Strive AI](https://github.com/joel710)**
 
-*L'IA au service des langues africaines* 🌍
+*L'IA au service des langues africaines* 
 
 </div>
