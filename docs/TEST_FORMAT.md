@@ -84,7 +84,7 @@ Each test category is a JSON file in `tests/` containing an array of test object
   "eval_method": "ewe_quality"
 }
 ```
-No additional fields needed — scored by heuristic.
+No additional fields needed   scored by heuristic.
 
 #### `composite`
 ```json
