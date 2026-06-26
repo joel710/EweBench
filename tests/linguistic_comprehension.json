@@ -1,119 +1,126 @@
 [
   {
     "id": "lc_grammar_01",
-    "prompt": "Asɔnu sia ƒe dɔwɔwɔ sɔ gbɔ le Ewe me: 'Kofi yi sukuu' — Sɔ kɔ ƒe tanya le eŋu: Ameka yi sukuu?",
-    "eval_method": "keywords",
-    "expected_keywords": ["Kofi"],
-    "description": "Compréhension de sujet — qui fait l'action"
+    "prompt": "Le afia ɖa: 'Ama le xɔ me.' Kae nye suyetɔ le afia ma me?",
+    "eval_method": "exact_match",
+    "expected": "Ama",
+    "description": "Identify the subject of a simple Ewe sentence (SVO structure)."
   },
   {
     "id": "lc_grammar_02",
-    "prompt": "Ðo gomekpɔkpɔ na nya sia: 'Ama ɖu nu eye wò nɔ anyi'. Nya nenie ɖe eme?",
-    "eval_method": "keywords",
-    "expected_keywords": ["ɖu", "nu", "nɔ", "anyi"],
-    "description": "Analyse grammaticale de phrase complexe"
+    "prompt": "Le afia ɖa: 'Kofi ɖu fufu.' Kae nye nudzɔdzɔe le afia ma me?",
+    "eval_method": "exact_match",
+    "expected": "fufu",
+    "description": "Identify the direct object of a transitive verb in Ewe."
   },
   {
     "id": "lc_grammar_03",
-    "prompt": "Le Ewe me, nuka ƒe tɔtrɔ nye 'me-' le dɔwɔwɔ ƒe dzi? Tsɔ kpɔɖeŋu aɖe na m.",
-    "eval_method": "composite",
-    "expected_keywords": ["me", "negation", "mey"],
-    "expected_format": {"contains_ewe": true, "min_length": 50},
-    "description": "Compréhension du préfixe négatif"
-  },
-  {
-    "id": "lc_vocabulary_01",
-    "prompt": "Gblɔ nyagbe sia ƒe gɔmesese le Ewe me: 'Ati aɖe me wɔa ave o'",
-    "eval_method": "composite",
-    "expected_keywords": ["ati", "ave"],
-    "expected_format": {"contains_ewe": true, "min_length": 30},
-    "description": "Compréhension de proverbe Ewe"
-  },
-  {
-    "id": "lc_vocabulary_02",
-    "prompt": "Na nya evelia (synonyme) na nya Ewe siawo: 1) deka 2) nyuie 3) zoo 4) fia 5) vi",
-    "eval_method": "composite",
-    "expected_keywords": ["ɖeka", "nyui"],
-    "expected_format": {"contains_ewe": true, "min_length": 40},
-    "description": "Vocabulaire — synonymes en Ewe"
-  },
-  {
-    "id": "lc_tone_01",
-    "prompt": "Le Ewe me, gbɔgblɔ 'to' ƒe gɔmesese vɔ le tɔ́ (high tone) kple tò (low tone) dome. Ðo sia gɔme.",
-    "eval_method": "composite",
-    "expected_keywords": ["to"],
-    "expected_format": {"contains_ewe": true, "min_length": 60},
-    "description": "Distinction tonale — signification selon le ton"
-  },
-  {
-    "id": "lc_morphology_01",
-    "prompt": "Trɔ nya sia yi zuzu: 'Kofi le agble me' → zuzu ƒe nyaŋuɖoɖo",
-    "eval_method": "composite",
-    "expected_keywords": ["Kofi"],
-    "expected_format": {"contains_ewe": true, "min_length": 20},
-    "description": "Morphologie — transformation de phrase"
+    "prompt": "Trɔ afia sia ɖo ƒe tsitsi (future) me: 'Kofi le fufu ɖum.' Ŋlɔ afia yeye la.",
+    "eval_method": "exact_match",
+    "expected": "Kofi a ɖu fufu.",
+    "description": "Transform a present progressive sentence into the future tense using the particle 'a'."
   },
   {
     "id": "lc_grammar_04",
-    "prompt": "Tia nyawo le ɖoɖo nyuitɔ me:\na) nu / Ama / ɖu\nb) sukuu / yi / Kofi / le",
+    "prompt": "Le afia ɖa: 'Wò ɖu fufu.' Trɔ 'wò' ɖo 'nye' eye nà ŋlɔ afia yeye la.",
+    "eval_method": "exact_match",
+    "expected": "Nye ɖu fufu.",
+    "description": "Replace the second person pronoun 'wò' with the first person pronoun 'nye' in a sentence."
+  },
+  {
+    "id": "lc_grammar_05",
+    "prompt": "Nu kae 'le ...m' fia le Eʋegbe me? Míʋɔ nu le afia ɖa: 'Kofi le ƒom.'",
     "eval_method": "keywords",
-    "expected_keywords": ["Ama ɖu nu", "Kofi le sukuu"],
-    "description": "Ordre des mots — reconstruction de phrases"
+    "expected_keywords": [
+      "progressive",
+      "continuing"
+    ],
+    "description": "Identify the meaning of the progressive aspect particle 'le...m' in a given sentence."
   },
   {
-    "id": "lc_plural_01",
-    "prompt": "Trɔ nyawo yi dzi-wo-me: 1) ame 2) ɖevi 3) ati 4) xɔ 5) avu",
-    "eval_method": "composite",
-    "expected_keywords": ["ame", "wo"],
-    "expected_format": {"contains_ewe": true, "min_length": 30},
-    "description": "Formation du pluriel en Ewe"
+    "id": "lc_grammar_06",
+    "prompt": "Le Eʋegbe me, 'ame' kple 'amewo' ƒe vɔvɔtɔ nye ka? Ŋlɔ nya siawo dometɔ ɖeka si nye ɖe geɖe.",
+    "eval_method": "keywords",
+    "expected_keywords": [
+      "amewo",
+      "plural"
+    ],
+    "description": "Distinguish between singular ('ame') and plural ('amewo') forms."
   },
   {
-    "id": "lc_postposition_01",
-    "prompt": "Le Ewe me, gblɔ nɔƒe-nyawo siawo ƒe tɔtrɔ: 'dzi', 'me', 'nu', 'te', 'megbe'. Na kpɔɖeŋu ɖeka-ɖeka.",
-    "eval_method": "composite",
-    "expected_keywords": ["dzi", "me", "nu"],
-    "expected_format": {"contains_ewe": true, "min_length": 80},
-    "description": "Postpositions locatives en Ewe"
+    "id": "lc_grammar_07",
+    "prompt": "Míele afia me be: 'Kofi le xɔ me.' Afikae Kofi le? Ŋlɔ ɖoɖo afia.",
+    "eval_method": "exact_match",
+    "expected": "E-le xɔ me.",
+    "description": "Answer a factual question based on a given locative sentence."
   },
   {
-    "id": "lc_serial_verb_01",
-    "prompt": "Nya sia 'Kofi ɖo ati tsɔ ná Ama' — dɔwɔwɔ nenie le eme? Ðo dɔwɔwɔ-gbɔsɔsɔ (serial verb) sia gɔme.",
-    "eval_method": "composite",
-    "expected_keywords": ["ɖo", "tsɔ"],
-    "expected_format": {"contains_ewe": true, "min_length": 50},
-    "description": "Compréhension des verbes sériels"
+    "id": "lc_grammar_08",
+    "prompt": "Wɔ afia sia wu enu: 'Kofi ......... fufu ɖum' (le / a / na). Nya kae dze le teƒe si me '........' le? Ŋlɔ nya la.",
+    "eval_method": "exact_match",
+    "expected": "le",
+    "description": "Choose the correct auxiliary particle to complete a progressive aspect sentence."
   },
   {
-    "id": "lc_aspect_01",
-    "prompt": "Ðo tɔtrɔ le 'progressive' kple 'habitual' dome le Ewe me. Na kpɔɖeŋu: 'Kofi le nu ɖum' vs 'Kofi ɖua nu'",
-    "eval_method": "composite",
-    "expected_keywords": ["le", "ɖu", "progressive", "habitual"],
-    "expected_format": {"contains_ewe": true, "min_length": 60},
-    "description": "Aspects verbaux — progressif vs habituel"
+    "id": "lc_grammar_09",
+    "prompt": "Le afia eve sia me, nya 'nye' wɔ dɔ tovɔ. Kae nye eƒe dɔwɔwɔ le afia ɖeka me (suyetɔ alo nudzɔdzɔe)? Afia: (a) 'Nye ɖu fufu.' (b) 'Kofi nye fofonye.'",
+    "eval_method": "keywords",
+    "expected_keywords": [
+      "suyetɔ",
+      "a"
+    ],
+    "description": "Identify the grammatical function (subject vs possessive) of a polysemous word based on context."
   },
   {
-    "id": "lc_question_formation_01",
-    "prompt": "Trɔ nyawo yi biabia-nya: 1) 'Kofi yi Lomé' 2) 'Ama ɖu fufu' 3) 'Ðeviwo le kpam'",
-    "eval_method": "composite",
-    "expected_keywords": ["ka", "?"],
-    "expected_format": {"contains_ewe": true, "min_length": 40},
-    "description": "Formation de questions"
+    "id": "lc_grammar_10",
+    "prompt": "Le afia ɖa: 'Va!' Kae nye eƒe seƒeƒe (negation)? Ŋlɔ nya la.",
+    "eval_method": "keywords",
+    "expected_keywords": [
+      "Mega",
+      "va",
+      "o"
+    ],
+    "description": "Form the negative imperative of 'come' using the 'mega...o' construction."
   },
   {
-    "id": "lc_relative_clause_01",
-    "prompt": "Tso nyagbe sia ƒe structure gɔme: 'Ame si yi sukuu la va aƒe'. Afi ka 'si' le dɔ wɔm le nya sia me?",
-    "eval_method": "composite",
-    "expected_keywords": ["si", "relative"],
-    "expected_format": {"contains_ewe": true, "min_length": 40},
-    "description": "Propositions relatives avec 'si'"
+    "id": "lc_grammar_11",
+    "prompt": "Le afia ɖa: 'Kofi lolo wu Ama.' Ame kae lolo wu?",
+    "eval_method": "exact_match",
+    "expected": "Kofi",
+    "description": "Extract the subject of comparison from a comparative sentence using 'wu'."
   },
   {
-    "id": "lc_numeral_01",
-    "prompt": "Xlẽ xexlẽdzesiwo le Ewe me: 17, 23, 45, 68, 99, 156",
-    "eval_method": "composite",
-    "expected_keywords": ["asieke", "bla"],
-    "expected_format": {"contains_ewe": true, "min_length": 40},
-    "description": "Système numéral Ewe"
+    "id": "lc_grammar_12",
+    "prompt": "Se afia sia: 'Esi Kofi ɖu fufu la, e-yi afi.' Nu kae Kofi wɔ do ŋgɔ (first)?",
+    "eval_method": "keywords",
+    "expected_keywords": [
+      "ɖu",
+      "fufu"
+    ],
+    "description": "Understand the temporal order in a subordinate clause introduced by 'esi' (when)."
+  },
+  {
+    "id": "lc_grammar_13",
+    "prompt": "Míenya be ŋutsuvi aɖe ŋkɔ nye Kofi. Ðo ŋu na biabia sia: 'Aleke nye ŋkɔ?'",
+    "eval_method": "exact_match",
+    "expected": "Nye ŋkɔ nye Kofi.",
+    "description": "Respond appropriately to a question about someone's name."
+  },
+  {
+    "id": "lc_grammar_14",
+    "prompt": "Le afia ɖa: 'Ama ƒe xɔ.' Xɔ la nye ame kae tɔ?",
+    "eval_method": "exact_match",
+    "expected": "Ama",
+    "description": "Identify the possessor in a possessive construction using 'ƒe'."
+  },
+  {
+    "id": "lc_grammar_15",
+    "prompt": "Le afia ɖa: 'Kofi me ɖu fufu o.' Nya kae ɖi fia be womewɔe o? Ŋlɔ nya eve siwo wɔ ɖeka la.",
+    "eval_method": "keywords",
+    "expected_keywords": [
+      "me",
+      "o"
+    ],
+    "description": "Identify the negative particles 'me' and 'o' that form negation in a standard Ewe sentence."
   }
 ]

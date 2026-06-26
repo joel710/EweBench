@@ -9,10 +9,10 @@ Usage:
     python run_benchmark.py --compare result1.json result2.json
 
 Presets disponibles:
-    deepseek  — DeepSeek API (nécessite DEEPSEEK_API_KEY dans .env)
-    gemini    — Google Gemini (nécessite GEMINI_API_KEY dans .env)
-    local     — Modèle local (ollama, vllm, etc.)
-    custom    — API custom (nécessite --endpoint)
+    deepseek    DeepSeek API (nécessite DEEPSEEK_API_KEY dans .env)
+    gemini      Google Gemini (nécessite GEMINI_API_KEY dans .env)
+    local       Modèle local (ollama, vllm, etc.)
+    custom      API custom (nécessite --endpoint)
 """
 
 import sys
@@ -54,7 +54,7 @@ PRESETS = {
 def print_comparison(report_a: dict, report_b: dict):
     """Affiche une comparaison visuelle entre deux rapports."""
     print(f"\n{'='*70}")
-    print(f"  ÈwéBench — Comparaison de Modèles")
+    print(f"  ÈwéBench   Comparaison de Modèles")
     print(f"{'='*70}")
     print(f"\n  {'Catégorie':<30} {'Model A':<12} {'Model B':<12} {'Delta':<10}")
     print(f"  {'':-<30} {'':-<12} {'':-<12} {'':-<10}")
@@ -114,7 +114,7 @@ def print_leaderboard():
     results.sort(key=lambda x: x["score"], reverse=True)
 
     print(f"\n{'='*70}")
-    print(f"  ÈwéBench — Leaderboard")
+    print(f"  ÈwéBench   Leaderboard")
     print(f"{'='*70}")
     print(f"\n  {'#':<4} {'Modèle':<25} {'ÈwéScore':<10} {'Tests':<12} {'Date':<12}")
     print(f"  {'':-<4} {'':-<25} {'':-<10} {'':-<12} {'':-<12}")
@@ -129,7 +129,7 @@ def print_leaderboard():
 
 def main():
     parser = argparse.ArgumentParser(
-        description="ÈwéBench Runner — Évalue un LLM sur le benchmark Ewe",
+        description="ÈwéBench Runner   Évalue un LLM sur le benchmark Ewe",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__
     )

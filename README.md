@@ -128,7 +128,7 @@ POST /v1/chat/completions
 ```
 
 **Tested providers:**
-- OpenAI SDK
+- DeepSeek API
 - Google Gemini (OpenAI-compatible endpoint)
 - Ollama (local)
 - vLLM (local)
@@ -166,17 +166,17 @@ cp .env.example .env
 # Ajouter vos clés API dans .env
 
 # Lancer avec un preset
-python run_benchmark.py --preset model --verbose
+python run_benchmark.py --preset deepseek --verbose
 
 # Lancer sur un modèle local
 python run_benchmark.py --endpoint http://localhost:11434/v1/chat/completions \
                         --model yawo-v10 --verbose
 
 # Évaluer une seule catégorie
-python run_benchmark.py --preset model --category cultural_knowledge -v
+python run_benchmark.py --preset deepseek --category cultural_knowledge -v
 
 # Comparer deux modèles
-python run_benchmark.py --compare results/model.json results/yawo.json
+python run_benchmark.py --compare results/deepseek.json results/yawo.json
 
 # Voir le classement
 python run_benchmark.py --leaderboard
@@ -214,7 +214,7 @@ L'**ÈwéScore** est un nombre unique (0-100) représentant la capacité globale
 
 | # | Model | ÈwéScore | Tests Passed | Date |
 |---|-------|----------|--------------|------|
-| 🥇 | *En attente de soumissions* |  - |  - |  - |
+| 🥇 | *En attente de soumissions* |   |   |   |
 
 > **Soumettre vos résultats** : Exécutez le benchmark, puis ouvrez une PR avec votre fichier de résultats dans `results/`.
 
@@ -293,6 +293,6 @@ Ways to contribute:
 
 **Created by [Joel Elisée ADZONYA](https://joel.adzonya.strivenew.com)   [Strive AI](https://github.com/joel710)**
 
-*L'IA au service des langues africaines* 
+*L'IA au service des langues africaines* 🌍
 
 </div>

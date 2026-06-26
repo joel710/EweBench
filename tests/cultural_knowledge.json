@@ -1,82 +1,215 @@
 [
   {
     "id": "ck_proverb_01",
-    "prompt": "Ðo nyagbe sia gɔme le Ewe me: 'Ðevi si manya asi klé o la, mɔ aɖe le eƒe nukpɔkpɔ me'",
+    "prompt": "Explique la signification du proverbe Ewe : 'Ame si le dɔme na le wo nu o, le eɖokui si le eƒe aʋa' (La personne qui n'a rien dans ses mains se bat avec elle-même). Que nous apprend ce proverbe sur la philosophie Ewe ?",
     "eval_method": "composite",
-    "expected_keywords": ["ɖevi", "asi"],
-    "expected_format": {"contains_ewe": true, "min_length": 40},
-    "description": "Explication de proverbe Ewe"
-  },
-  {
-    "id": "ck_proverb_02",
-    "prompt": "Na nyagbe Ewe 5 siwo fia nyateƒe tso dɔ-wɔwɔ sesẽ ŋu. Ðo ɖeka-ɖeka ƒe gɔmesese gɔme.",
-    "eval_method": "composite",
-    "expected_keywords": [],
-    "expected_format": {"contains_ewe": true, "min_length": 200},
-    "description": "Liste de proverbes avec explications"
-  },
-  {
-    "id": "ck_history_01",
-    "prompt": "Gblɔ Ewe-dukowo ƒe ɖoɖo le Notsie ƒe megbe ŋu le Ewe me. Nuka dzɔ eye aleke wotso Notsie la?",
-    "eval_method": "composite",
-    "expected_keywords": ["Notsie", "Agokoli"],
-    "expected_format": {"contains_ewe": true, "min_length": 100},
-    "description": "Histoire — migration depuis Notsie"
-  },
-  {
-    "id": "ck_history_02",
-    "prompt": "Ameka nye Togbe Tsali? Aleke wòwɔ dɔ na Ewe-dukowo? Ðo ɖe eŋu le Ewe me.",
-    "eval_method": "composite",
-    "expected_keywords": ["Tsali"],
-    "expected_format": {"contains_ewe": true, "min_length": 80},
-    "description": "Personnage historique Ewe"
-  },
-  {
-    "id": "ck_tradition_01",
-    "prompt": "Ðo Agbadza ƒe ɖoɖo gɔme le Ewe me. Afi ka wowɔa, nuka ta, eye aleke ƒe atamga le eme?",
-    "eval_method": "composite",
-    "expected_keywords": ["Agbadza", "ha"],
-    "expected_format": {"contains_ewe": true, "min_length": 100},
-    "description": "Danse traditionnelle — Agbadza"
+    "expected_keywords": [
+      "autonomie",
+      "préparation",
+      "responsabilité",
+      "effort personnel",
+      "lutte intérieure"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 60
+    },
+    "description": "Explication d'un proverbe Ewe authentique sur l'effort personnel"
   },
   {
     "id": "ck_tradition_02",
-    "prompt": "Gblɔ nusiawo dzi si wowɔa le 'Hogbetsotso' ƒe dzɔdzɔme me le Ewe me.",
+    "prompt": "Décris le déroulement d'une cérémonie traditionnelle de mariage Ewe (Ŋkeke) au Togo. Quelles sont les étapes clés et les symboles importants ?",
     "eval_method": "composite",
-    "expected_keywords": ["Hogbetsotso", "Notsie"],
-    "expected_format": {"contains_ewe": true, "min_length": 100},
-    "description": "Festival — Hogbetsotso"
+    "expected_keywords": [
+      "fiançailles",
+      "dot",
+      "akomanyi",
+      "famille",
+      "vin de palme",
+      "bénédiction",
+      "tissus kente"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 80
+    },
+    "description": "Connaissance des traditions nuptiales Ewe"
   },
   {
-    "id": "ck_food_01",
-    "prompt": "Gblɔ nududu 5 siwo nye Ewe-tɔwo ƒe nududu dzidzemetɔwo eye nàɖo ɖeka-ɖeka ƒe dɔwɔɖi gɔme kpui ɖe.",
+    "id": "ck_history_03",
+    "prompt": "Quelle est l'origine du peuple Ewe selon la tradition orale ? Parle de la migration depuis Notsé (Togoville) et de la dispersion des clans. Pourquoi le roi Agokoli est-il important dans cette histoire ?",
     "eval_method": "composite",
-    "expected_keywords": ["fufu", "akple"],
-    "expected_format": {"contains_ewe": true, "min_length": 150},
+    "expected_keywords": [
+      "Notsé",
+      "Agokoli",
+      "mur de Notsé",
+      "migration",
+      "clans",
+      "Anlo",
+      "Ghana",
+      "Togo",
+      "Bénin"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 80
+    },
+    "description": "Histoire de la migration Ewe depuis Notsé"
+  },
+  {
+    "id": "ck_geography_04",
+    "prompt": "Cite deux villes ou lieux sacrés importants dans la région Ewe du Togo et explique leur signification culturelle. (Par exemple, Togoville, Vogan, Kpalimé, le lac Togo, etc.)",
+    "eval_method": "composite",
+    "expected_keywords": [
+      "Togoville",
+      "Vogan",
+      "Kpalimé",
+      "Lac Togo",
+      "Anexo",
+      "lieu de pèlerinage",
+      "fétiche",
+      "Gbe"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 50
+    },
+    "description": "Géographie culturelle Ewe"
+  },
+  {
+    "id": "ck_cuisine_05",
+    "prompt": "Décris la préparation traditionnelle du fufu (fufu) avec de la sauce arachide (kuli) ou de la sauce gombo (fetri). Quels sont les ingrédients de base et les gestes rituels ?",
+    "eval_method": "composite",
+    "expected_keywords": [
+      "igname",
+      "manioc",
+      "plantain",
+      "pilon",
+      "mortier",
+      "pâte",
+      "arachide",
+      "huile de palme",
+      "poisson fumé"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 60
+    },
     "description": "Cuisine traditionnelle Ewe"
   },
   {
-    "id": "ck_naming_01",
-    "prompt": "Le Ewe ƒe ɖoɖo me la, aleke wona ŋkɔ ɖeviwo? Nuka nye ŋkɔ-nana ƒe gɔmesese? Na kpɔɖeŋu aɖewo.",
+    "id": "ck_festival_06",
+    "prompt": "Explique le festival Hogbetsotso célébré par les Anlo-Ewe au Ghana. Quelle est son origine historique et que symbolise-t-il pour la communauté ? Décris une activité typique de ce festival.",
     "eval_method": "composite",
-    "expected_keywords": ["ŋkɔ", "ɖevi", "dzɔ"],
-    "expected_format": {"contains_ewe": true, "min_length": 100},
-    "description": "Traditions de nomination"
+    "expected_keywords": [
+      "Hogbetsotso",
+      "Anlo",
+      "Ghana",
+      "migration",
+      "Notsé",
+      "fête",
+      "purification",
+      "danse",
+      "Agbadza",
+      "libation"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 70
+    },
+    "description": "Connaissance du festival Hogbetsotso"
   },
   {
-    "id": "ck_music_01",
-    "prompt": "Gblɔ Ewe ƒe hawo ƒe xɔxɔ ŋu. Hadziɖoɖowo sɔ kpɔɖeŋu enyi na m eye nàɖo wo ƒe tɔtrɔ gɔme.",
+    "id": "ck_names_07",
+    "prompt": "Quel est le principe des noms de jour chez les Ewe ? Donne le nom d'un garçon et d'une fille nés un mercredi (Kwasi/Akosua) et un vendredi (Kofi/Afua). Explique la signification spirituelle de ces noms.",
     "eval_method": "composite",
-    "expected_keywords": ["ha", "vu"],
-    "expected_format": {"contains_ewe": true, "min_length": 120},
-    "description": "Musique et rythmes traditionnels"
+    "expected_keywords": [
+      "Kwasi",
+      "Akosua",
+      "Kofi",
+      "Afua",
+      "jour de naissance",
+      "âme",
+      "dieu",
+      "Mawu",
+      "Sodabi",
+      "agasou"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 60
+    },
+    "description": "Système de noms de jours Ewe"
   },
   {
-    "id": "ck_religion_01",
-    "prompt": "Ðo Mawu-susu le Eweawo ƒe nɔnɔme xɔxɔ me gɔme. Aleke wosusu nusianusiwo ŋu?",
+    "id": "ck_music_08",
+    "prompt": "Décris la danse traditionnelle Agbadza. Quels sont les instruments de musique utilisés, les mouvements caractéristiques, et à quelles occasions cette danse est-elle exécutée ?",
     "eval_method": "composite",
-    "expected_keywords": ["Mawu", "trɔ"],
-    "expected_format": {"contains_ewe": true, "min_length": 100},
-    "description": "Spiritualité traditionnelle Ewe"
+    "expected_keywords": [
+      "tambours",
+      "gongon",
+      "gankogui",
+      "axatse",
+      "cloches",
+      "rythme",
+      "cercle",
+      "mouvements de bras",
+      "pas glissés",
+      "funérailles",
+      "festivals"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 60
+    },
+    "description": "Musique et danse Agbadza"
+  },
+  {
+    "id": "ck_spirituality_09",
+    "prompt": "Quel est le rôle des prêtres feticheurs (Dɔkɔ̃) et des libations dans la spiritualité traditionnelle Ewe ? Explique la place de Mawu (dieu suprême) et des divinités intermédiaires (Dzi yiyi, Hebiéso, etc.)",
+    "eval_method": "composite",
+    "expected_keywords": [
+      "Mawu",
+      "Hebiéso",
+      "Dzo",
+      "libation",
+      "sodabi",
+      "water",
+      "autel",
+      "fétiche",
+      "ancêtres",
+      "trônes",
+      "dua"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 70
+    },
+    "description": "Croyances et spiritualité Ewe"
+  },
+  {
+    "id": "ck_artisan_10",
+    "prompt": "Décris l'art du tissage du kente chez les Ewe (particulièrement à Agbozumé ou dans la région d'Atakpamé). Quelles sont les couleurs traditionnelles et leur symbolique ? Comment le kente est-il utilisé dans les cérémonies ?",
+    "eval_method": "composite",
+    "expected_keywords": [
+      "kente",
+      "tissage",
+      "fil de coton",
+      "soie",
+      "couleurs",
+      "rouge",
+      "or",
+      "bleu",
+      "signification",
+      "chef",
+      "cérémonie",
+      "Agbozumé",
+      "Atakpamé"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 60
+    },
+    "description": "Artisanat du kente Ewe"
   }
 ]

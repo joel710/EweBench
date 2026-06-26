@@ -2,109 +2,283 @@
   {
     "id": "mt_context_01",
     "messages": [
-      {"role": "system", "content": "Tu es Yawo, un assistant IA qui répond en Ewe (langue du Togo/Ghana). Tu es chaleureux et naturel."},
-      {"role": "user", "content": "Nye ŋkɔ nye Kofi. Menɔ Lomé."},
-      {"role": "assistant", "content": "Kofi, woezo! Lomé nye dukɔ nyui aɖe. Aleke nèle?"},
-      {"role": "user", "content": "Mele nyuie. Gblɔ nuka nènya tso nye ŋu na m."}
+      {
+        "role": "system",
+        "content": "Tu es Yawo, un assistant IA qui répond en Ewe (langue du Togo/Ghana). Tu es chaleureux et naturel."
+      },
+      {
+        "role": "user",
+        "content": "Nye nye Kofi."
+      },
+      {
+        "role": "assistant",
+        "content": "Woezor Kofi! Aleke nèle?"
+      },
+      {
+        "role": "user",
+        "content": "Mele nyuie. Ðe wòle Togo?"
+      },
+      {
+        "role": "assistant",
+        "content": "Enyo, mele Togo."
+      },
+      {
+        "role": "user",
+        "content": "Gblɔ nye ŋkɔ."
+      }
     ],
     "eval_method": "keywords",
-    "expected_keywords": ["Kofi", "Lomé"],
-    "description": "Rappel du contexte — nom et ville"
+    "expected_keywords": [
+      "Kofi"
+    ],
+    "description": "Rappel du nom de l'utilisateur mentionné 2 tours avant"
   },
   {
     "id": "mt_context_02",
     "messages": [
-      {"role": "system", "content": "Tu es Yawo, un assistant IA qui répond en Ewe."},
-      {"role": "user", "content": "Mele be yeasrɔ̃ Ewe gbe. Mele anyigba si dzi la nye Canada."},
-      {"role": "assistant", "content": "Eya nyo ŋutɔ! Canada tɔ eye èdi be yeàsrɔ̃ Ewe gbe. Meateŋu akpe ɖe ŋuwò. Míadze gɔme kple nya kpuiwo."},
-      {"role": "user", "content": "Nyui. Afi ka menɔa ŋkɔ?"},
-      {"role": "assistant", "content": "Wògblɔ be nènɔ Canada. Nèdi be yease afi la ƒe ŋkɔ a alo àdi be makae hã?"},
-      {"role": "user", "content": "Ao, mele Toronto. Gake medi be nàkpe ɖe ŋunye kple salutations le Ewe me."}
-    ],
-    "eval_method": "composite",
-    "expected_keywords": ["Toronto", "Canada"],
-    "expected_format": {"contains_ewe": true, "min_length": 50},
-    "description": "Suivi de contexte sur 3 tours"
-  },
-  {
-    "id": "mt_topic_switch_01",
-    "messages": [
-      {"role": "system", "content": "Tu es Yawo, un assistant IA qui répond en Ewe."},
-      {"role": "user", "content": "Aleke woawɔ fufu?"},
-      {"role": "assistant", "content": "Fufu ƒe wɔwɔ:\n1. Tsɔ bankye alo yamɔte eye nàklé wo nyuie\n2. Da wo le tsi me\n3. To wo le tó me\n4. Tsɔ fetri alo nkrakra naa fuu kple eya"},
-      {"role": "user", "content": "Nyui, akpe. Fifia medi be màbía nu tso computer programming ŋu. Aleke Pythɔn dɔwɔa?"}
-    ],
-    "eval_method": "composite",
-    "expected_keywords": ["Python"],
-    "expected_format": {"contains_ewe": true, "min_length": 80},
-    "description": "Changement de sujet — adaptation"
-  },
-  {
-    "id": "mt_correction_01",
-    "messages": [
-      {"role": "system", "content": "Tu es Yawo, un assistant IA qui répond en Ewe."},
-      {"role": "user", "content": "Gblɔ dukɔga si le Togo la ƒe ŋkɔ nam."},
-      {"role": "assistant", "content": "Togo ƒe dukɔga nye Accra."},
-      {"role": "user", "content": "Ao! Eya menye ɖa o. Accra le Ghana. Togo ƒeta ŋkɔ nye ka?"}
+      {
+        "role": "system",
+        "content": "Tu es Yawo, un assistant IA qui répond en Ewe (langue du Togo/Ghana). Tu es chaleureux et naturel."
+      },
+      {
+        "role": "user",
+        "content": "Meyi Kpalime etsɔ."
+      },
+      {
+        "role": "assistant",
+        "content": "Enyo. Aleke nu le afi ma wɔm?"
+      },
+      {
+        "role": "user",
+        "content": "Enyo. Mee le tɔƒe ma."
+      },
+      {
+        "role": "assistant",
+        "content": "Enyo. Ðe wòle afi ma gbɔ?"
+      },
+      {
+        "role": "user",
+        "content": "Afi ka meyi?"
+      }
     ],
     "eval_method": "keywords",
-    "expected_keywords": ["Lomé"],
-    "description": "Correction d'erreur et adaptation"
+    "expected_keywords": [
+      "Kpalime"
+    ],
+    "description": "Référence à un lieu mentionné précédemment"
   },
   {
-    "id": "mt_reference_01",
+    "id": "mt_context_03",
     "messages": [
-      {"role": "system", "content": "Tu es Yawo, un assistant IA qui répond en Ewe."},
-      {"role": "user", "content": "Medi be yeasrɔ̃ dɔ etɔ̃: Python, JavaScript, kple Rust. Dze gɔme kple gbe si bɔ ɖe asi tɔ na m."},
-      {"role": "assistant", "content": "Python nye gbe si bɔ ɖe asi tɔ. Eƒe syntax sɔ kple English didi eye wòle bɔbɔe be nèasrɔ̃. Míadze gɔme kple eya."},
-      {"role": "user", "content": "Eye neva evelia? Eya ka ƒe tɔtrɔ le esi ŋkɔ la dome?"}
+      {
+        "role": "system",
+        "content": "Tu es Yawo, un assistant IA qui répond en Ewe (langue du Togo/Ghana). Tu es chaleureux et naturel."
+      },
+      {
+        "role": "user",
+        "content": "Melɔ̃a agble wɔwɔ."
+      },
+      {
+        "role": "assistant",
+        "content": "Enyo. Nuka nènɔ wɔm le agble me?"
+      },
+      {
+        "role": "user",
+        "content": "Meɖea kple eto."
+      },
+      {
+        "role": "assistant",
+        "content": "Enyo. Nuka tɔgbe?"
+      },
+      {
+        "role": "user",
+        "content": "Gblɔ nu siwo meyɔ."
+      }
     ],
     "eval_method": "keywords",
-    "expected_keywords": ["JavaScript"],
-    "description": "Référence implicite — 'le second'"
-  },
-  {
-    "id": "mt_style_adapt_01",
-    "messages": [
-      {"role": "system", "content": "Tu es Yawo, un assistant IA qui répond en Ewe."},
-      {"role": "user", "content": "Gblɔ nu nam abe ɖɔla aɖe ene — kpui ko, mègaɖo kuku o."},
-      {"role": "assistant", "content": "Sɔ. Bía nu."},
-      {"role": "user", "content": "Nuka nye AI?"},
-      {"role": "assistant", "content": "Computer si ateŋu abú nu abe ame ene."},
-      {"role": "user", "content": "Fifia trɔ yi ɖoɖo susɔe — gblɔ nu nam abe nufiala ene, kple kpɔɖeŋu geɖe. Gblɔ nuka nye machine learning."}
+    "expected_keywords": [
+      "kple",
+      "eto"
     ],
-    "eval_method": "composite",
-    "expected_keywords": ["machine learning"],
-    "expected_format": {"contains_ewe": true, "min_length": 100},
-    "description": "Adaptation de style en cours de conversation"
+    "description": "Suivi d'un sujet avec approfondissement - l'utilisateur a mentionné ses cultures, le modèle doit les rappeler"
   },
   {
-    "id": "mt_memory_long_01",
+    "id": "mt_context_04",
     "messages": [
-      {"role": "system", "content": "Tu es Yawo, un assistant IA qui répond en Ewe."},
-      {"role": "user", "content": "Nye ŋkɔ nye Esi. Mele ŋkeke 25 me. Medze programming gɔme ŋkeke 2 si va yi."},
-      {"role": "assistant", "content": "Woezo Esi! Nyo be nèle ŋkeke 25 me eye nèdze programming gɔme ɣli. Ŋkeke 2 ƒe nufiamɔnu — nyui ŋutɔ! Aleke mate ŋu akpe ɖe ŋuwò egbe?"},
-      {"role": "user", "content": "Medi nàkpe ɖe ŋunye be measrɔ̃ Python."},
-      {"role": "assistant", "content": "Eya nyo! Python nye gbe nyui na asi-ɖoɖo. Míadze gɔme kple variables kple data types. Àsẽ be àbiá nu aɖe hã ŋgɔ?"},
-      {"role": "user", "content": "Ao míadze gɔme. Gake gbã la gblɔ nam — informations ka nètsɔ ɖo nye ŋu fifia?"}
+      {
+        "role": "system",
+        "content": "Tu es Yawo, un assistant IA qui répond en Ewe (langue du Togo/Ghana). Tu es chaleureux et naturel."
+      },
+      {
+        "role": "user",
+        "content": "Meyi Kpalime etsɔ."
+      },
+      {
+        "role": "assistant",
+        "content": "Enyo. Aleke nu le afi ma?"
+      },
+      {
+        "role": "user",
+        "content": "Enyo. Gake mele susum le ɖeviwo ŋu."
+      },
+      {
+        "role": "assistant",
+        "content": "Enyo. Nuka le ɖeviwo ŋu?"
+      },
+      {
+        "role": "user",
+        "content": "Gblɔ afi si meyi le gɔme."
+      }
     ],
     "eval_method": "keywords",
-    "expected_keywords": ["Esi", "25", "Python", "2"],
-    "description": "Mémoire longue — rappel de toutes les infos"
+    "expected_keywords": [
+      "Kpalime"
+    ],
+    "description": "Changement de sujet puis retour au premier sujet - l'utilisateur a parlé de Kpalime puis des enfants, et demande de rappeler le lieu"
   },
   {
-    "id": "mt_task_continuation_01",
+    "id": "mt_context_05",
     "messages": [
-      {"role": "system", "content": "Tu es Yawo, un assistant IA qui répond en Ewe."},
-      {"role": "user", "content": "Kpe ɖe ŋunye be maŋlɔ email yi nye ƒe nufiala. Dze gɔme kple sujet la."},
-      {"role": "assistant", "content": "Nyui! Míadze gɔme. Na sujet la gblɔ nam: Nuka ŋu nàŋlɔ nà nufiala?"},
-      {"role": "user", "content": "Medi be yease ŋkeke si dɔ aɖe ƒe deadline la le ɖi yi gbe 3."},
-      {"role": "assistant", "content": "Sɔ. Email ƒe sujet: 'Biabia tso deadline ƒe trɔtrɔ ŋu'\n\nFifia na body la. Aleke nèdi be nàdze gɔme?"},
-      {"role": "user", "content": "Dze gɔme nam le ɖoɖo nyuitɔ (formal) me."}
+      {
+        "role": "system",
+        "content": "Tu es Yawo, un assistant IA qui répond en Ewe (langue du Togo/Ghana). Tu es chaleureux et naturel."
+      },
+      {
+        "role": "user",
+        "content": "Melɔ̃a akɔɖu."
+      },
+      {
+        "role": "assistant",
+        "content": "Enyo. Nuka nèwɔna kpli wo?"
+      },
+      {
+        "role": "user",
+        "content": "Meɖua wo."
+      },
+      {
+        "role": "assistant",
+        "content": "Enyo. Nuka nèlɔ̃a nuɖuɖu?"
+      },
+      {
+        "role": "user",
+        "content": "Gblɔ nye nu si melɔ̃a wu le atikutsetse me."
+      }
     ],
-    "eval_method": "composite",
-    "expected_keywords": ["deadline"],
-    "expected_format": {"contains_ewe": true, "min_length": 80},
-    "description": "Continuation de tâche collaborative"
+    "eval_method": "keywords",
+    "expected_keywords": [
+      "akɔɖu"
+    ],
+    "description": "Rappel d'une préférence de l'utilisateur (akɔɖu)"
+  },
+  {
+    "id": "mt_context_06",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Tu es Yawo, un assistant IA qui répond en Ewe (langue du Togo/Ghana). Tu es chaleureux et naturel."
+      },
+      {
+        "role": "user",
+        "content": "Ɣleti kae le fifia?"
+      },
+      {
+        "role": "assistant",
+        "content": "Ɣleti le December."
+      },
+      {
+        "role": "user",
+        "content": "Aleke wònye ɖe December?"
+      },
+      {
+        "role": "assistant",
+        "content": "Enyo, mekpɔa sidzedze."
+      },
+      {
+        "role": "user",
+        "content": "Gblɔ ɣleti si mele fifia."
+      }
+    ],
+    "eval_method": "keywords",
+    "expected_keywords": [
+      "December"
+    ],
+    "description": "Question de suivi qui nécessite le contexte du tour précédent (le mois mentionné par l'assistant)"
+  },
+  {
+    "id": "mt_context_07",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Tu es Yawo, un assistant IA qui répond en Ewe (langue du Togo/Ghana). Tu es chaleureux et naturel."
+      },
+      {
+        "role": "user",
+        "content": "Nye nye Kofi."
+      },
+      {
+        "role": "assistant",
+        "content": "Woezor Kofi!"
+      },
+      {
+        "role": "user",
+        "content": "Nyateƒe, nye nye Mawu, menye Kofi o."
+      },
+      {
+        "role": "assistant",
+        "content": "Enyo, Mawu! Alesi ke nèle?"
+      },
+      {
+        "role": "user",
+        "content": "Gblɔ nye ŋkɔ."
+      }
+    ],
+    "eval_method": "keywords",
+    "expected_keywords": [
+      "Mawu"
+    ],
+    "description": "L'utilisateur corrige son nom, le modèle doit utiliser le nouveau nom"
+  },
+  {
+    "id": "mt_context_08",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Tu es Yawo, un assistant IA qui répond en Ewe (langue du Togo/Ghana). Tu es chaleureux et naturel."
+      },
+      {
+        "role": "user",
+        "content": "Meyi asi me etsɔ."
+      },
+      {
+        "role": "assistant",
+        "content": "Enyo. Nuka nèƒle?"
+      },
+      {
+        "role": "user",
+        "content": "Meƒle ame kple lã."
+      },
+      {
+        "role": "assistant",
+        "content": "Enyo. Nuka wòwɔ kpli wo?"
+      },
+      {
+        "role": "user",
+        "content": "Kple ame la, meɖa. Ke lã la, meɖi."
+      },
+      {
+        "role": "assistant",
+        "content": "Enyo. Eɖa ame, eɖi lã."
+      },
+      {
+        "role": "user",
+        "content": "Gblɔ nu siwo meƒle le asi me."
+      }
+    ],
+    "eval_method": "keywords",
+    "expected_keywords": [
+      "ame",
+      "lã"
+    ],
+    "description": "Conversation naturelle avec transitions - l'utilisateur parle du marché, achats, puis demande de rappeler"
   }
 ]

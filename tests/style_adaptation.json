@@ -1,65 +1,133 @@
 [
   {
     "id": "sa_formal_01",
-    "prompt": "Le ɖoɖo nyuitɔ ŋutɔ me (abe leta yi president ene), ŋlɔ biabia aɖe be woana mɔ na sukuu yeye ɖe wò ƒe tokɔ me. Le Ewe me.",
+    "prompt": "Écris ce message en Ewe formel, en utilisant des formules de respect : 'Bonjour, comment allez-vous ? Je vous souhaite une bonne journée.'",
     "eval_method": "composite",
-    "expected_keywords": ["sukuu"],
-    "expected_format": {"contains_ewe": true, "min_length": 150},
-    "description": "Style formel — lettre officielle"
+    "expected_keywords": [
+      "meɖe kuku",
+      "míawo",
+      "akpe",
+      "nyateƒe"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 60
+    },
+    "description": "Test d'adaptation au registre formel : présence de marqueurs de politesse et de respect en Ewe."
   },
   {
     "id": "sa_informal_01",
-    "prompt": "Ŋlɔ message kpui aɖe yi wò xɔlɔ̃ be nàva wò ƒe party me. Nanɔ abe gbɔ̃gbe-nya ene kpátó — abe text message ene.",
+    "prompt": "Écris ce même message en Ewe informel (familier) : 'Bonjour, comment ça va ? Bonne journée !'",
     "eval_method": "composite",
-    "expected_keywords": [],
-    "expected_format": {"contains_ewe": true, "min_length": 30, "max_length": 300},
-    "description": "Style informel — invitation entre amis"
+    "expected_keywords": [
+      "wɔezo",
+      "chale",
+      "dɔwɔwɔ",
+      "nyui"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 40
+    },
+    "description": "Test d'adaptation au registre informel : vocabulaire familier et tournures plus courtes."
   },
   {
-    "id": "sa_technical_01",
-    "prompt": "Ðo alesi internet ƒe routing dɔwɔa gɔme le ɖoɖo technical me. Zã termes siwo sɔ kple domain la.",
+    "id": "sa_child_01",
+    "prompt": "Explique en Ewe, comme à un enfant de 5 ans, pourquoi il faut se laver les mains. Utilise des mots très simples et des répétitions.",
     "eval_method": "composite",
-    "expected_keywords": ["IP", "router", "packet"],
-    "expected_format": {"contains_ewe": true, "min_length": 100},
-    "description": "Style technique — explication réseau"
+    "expected_keywords": [
+      "asi",
+      "klɔ",
+      "dɔ",
+      "ŋutsuvi",
+      "kplɔkplɔ"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 50
+    },
+    "description": "Test d'adaptation pour enfant : phrases courtes, répétitions, vocabulaire concret."
   },
   {
-    "id": "sa_simple_01",
-    "prompt": "Ðo alesi internet dɔwɔa gɔme na ɖevi si le ŋkeke 8 me. Zã nya kpuiwo kple kpɔɖeŋu kasiamee.",
+    "id": "sa_adult_01",
+    "prompt": "Explique en Ewe, pour un adulte, les bénéfices de l'hygiène des mains. Utilise un ton sérieux et des termes plus précis.",
     "eval_method": "composite",
-    "expected_keywords": [],
-    "expected_format": {"contains_ewe": true, "min_length": 80},
-    "description": "Style simplifié — explication pour enfant"
+    "expected_keywords": [
+      "dɔmeɖoanyi",
+      "amamenya",
+      "kpɔ",
+      "dzidzɔkpɔkplɔ"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 80
+    },
+    "description": "Test d'adaptation pour adulte : ton sérieux, lexique élaboré, phrases complexes."
+  },
+  {
+    "id": "sa_humor_01",
+    "prompt": "Raconte une blague courte en Ewe sur un chien qui parle. Utilise un ton humoristique et des mots drôles.",
+    "eval_method": "composite",
+    "expected_keywords": [
+      "alɔ",
+      "kple",
+      "xe",
+      "gbolo",
+      "nuwɔwɔ"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 50
+    },
+    "description": "Test d'adaptation humoristique : présence d'onomatopées, de jeux de mots ou de situations comiques."
+  },
+  {
+    "id": "sa_serious_01",
+    "prompt": "Écris un court texte sérieux en Ewe sur l'importance de la protection de l'environnement. Utilise un ton grave et des arguments factuels.",
+    "eval_method": "composite",
+    "expected_keywords": [
+      "anyigba",
+      "kpɔdzikpe",
+      "xeɖeɖe",
+      "numekugbe"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 70
+    },
+    "description": "Test d'adaptation sérieux : vocabulaire argumentatif, absence d'humour, ton posé."
   },
   {
     "id": "sa_narrative_01",
-    "prompt": "Gblɔ story kpui aɖe le Ewe me tso ɖevi si yi dzɔdzɔme gã aɖe dzi ŋu. Zã narrative style — description suetɔe.",
-    "eval_method": "ewe_quality",
-    "expected_format": {"contains_ewe": true, "min_length": 200},
-    "description": "Style narratif — histoire"
+    "prompt": "Raconte en Ewe sous forme de conte (début : 'Gbɔgbe aɖe me...') l'histoire d'une tortue et d'un lièvre. Utilise un style narratif avec dialogues.",
+    "eval_method": "composite",
+    "expected_keywords": [
+      "gbɔgbe aɖe me",
+      "ametsitsi aɖe",
+      "heɖe",
+      "gblɔ"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 100
+    },
+    "description": "Test d'adaptation narratif : structure de conte, présence de personnages et de dialogues."
   },
   {
-    "id": "sa_debate_01",
-    "prompt": "Wɔ abe debater aɖe ene eye nàɖe mɔ̃ɖe be 'technology nyoa na Afrika wu esi wòwɔa vevesẽ na'. Tsɔ arguments kple preuves. Le Ewe me.",
+    "id": "sa_explanatory_01",
+    "prompt": "Explique en Ewe, comme dans un cours de sciences, le cycle de l'eau. Utilise un style explicatif, des définitions précises et des connecteurs logiques.",
     "eval_method": "composite",
-    "expected_keywords": ["technology", "Afrika"],
-    "expected_format": {"contains_ewe": true, "min_length": 150},
-    "description": "Style débat — argumentation"
-  },
-  {
-    "id": "sa_humorous_01",
-    "prompt": "Gblɔ lolo (joke) eve-etɔ̃ le Ewe me siwo na dzidzi ame. Eye nàɖo gɔme ɖe hã ne ame aɖe mesee o.",
-    "eval_method": "composite",
-    "expected_keywords": [],
-    "expected_format": {"contains_ewe": true, "min_length": 80},
-    "description": "Style humoristique"
-  },
-  {
-    "id": "sa_academic_01",
-    "prompt": "Ŋlɔ paragraph aɖe le academic style me tso 'gbe ƒe ɖoɖo le digital ŋkeke me' ŋu. Zã ɖoɖo si sɔ kple research paper.",
-    "eval_method": "composite",
-    "expected_keywords": ["gbe", "digital"],
-    "expected_format": {"contains_ewe": true, "min_length": 120},
-    "description": "Style académique"
+    "expected_keywords": [
+      "tsi",
+      "dzidzime",
+      "kplɔla",
+      "eyata",
+      "le eme"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 90
+    },
+    "description": "Test d'adaptation explicatif : vocabulaire technique, organisation logique, connecteurs."
   }
 ]

@@ -1,95 +1,211 @@
 [
   {
-    "id": "tg_fluency_01",
-    "prompt": "Ŋlɔ nuŋlɔɖi kpui aɖe (lignes 5-8) tso Lomé ƒe nkeke gbãtɔ le Ghana ƒe ɖoɖo megbe ŋu.",
-    "eval_method": "composite",
-    "expected_keywords": ["Lomé"],
-    "expected_format": {"contains_ewe": true, "min_length": 150},
-    "description": "Génération de texte narratif fluide"
-  },
-  {
-    "id": "tg_fluency_02",
-    "prompt": "Ŋlɔ ŋkɔnya kpui aɖe tso 'dzɔdzɔme ɖe nyateƒe' ŋu le Ewe me. A ɖo alea 100 nenia.",
+    "id": "tg_paragraph_01",
+    "prompt": "Écris un paragraphe en Ewe d'au moins 100 mots sur l'agriculture (agble) au Togo. Explique les cultures principales et l'importance de l'agriculture pour les familles.",
     "eval_method": "ewe_quality",
-    "expected_format": {"contains_ewe": true, "min_length": 200},
-    "description": "Génération d'essai court — thème philosophique"
+    "expected_keywords": [
+      "agble",
+      "blisi",
+      "eti",
+      "gɔmeɖoɖo",
+      "nuɖuɖu"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 500
+    },
+    "description": "Teste la capacité à produire un texte cohérent sur un sujet concret (agriculture) en utilisant le vocabulaire approprié."
   },
   {
-    "id": "tg_coherence_01",
-    "prompt": "Dze gɔme: 'Gbɔ̃gbe aɖe, ɖevia va aƒe tso sukuu eye...' — Kpɔ ɖe ŋu bena story la nà nɔ edzi.",
-    "eval_method": "composite",
-    "expected_keywords": ["ɖevi", "sukuu"],
-    "expected_format": {"contains_ewe": true, "min_length": 200},
-    "description": "Continuation cohérente d'une histoire"
-  },
-  {
-    "id": "tg_creative_01",
-    "prompt": "Ŋlɔ ha (poème) aɖe le Ewe me tso 'dzɔdzɔme ƒe ŋɔsese' ŋu. Zã gɔmesese suetɔe kple dzɔdzɔme ŋuti nyawo.",
-    "eval_method": "composite",
-    "expected_keywords": [],
-    "expected_format": {"contains_ewe": true, "min_length": 100},
-    "description": "Création poétique en Ewe"
-  },
-  {
-    "id": "tg_creative_02",
-    "prompt": "Ŋlɔ ha kpui aɖe na viwo le Ewe me. Èna bena wóa kpɔ dzidzɔ.",
+    "id": "tg_poem_02",
+    "prompt": "Compose un poème court (au moins 8 vers) en Ewe sur la mer (ɖe / atsiaƒu). Utilise des images et des émotions liées à la mer.",
     "eval_method": "ewe_quality",
-    "expected_format": {"contains_ewe": true, "min_length": 80},
-    "description": "Chanson pour enfants en Ewe"
+    "expected_keywords": [
+      "ɖe",
+      "atsiaƒu",
+      "ƒe",
+      "ŋutifafa",
+      "dzo"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 200
+    },
+    "description": "Évalue la créativité poétique et l'utilisation du langage figuré en Ewe."
   },
   {
-    "id": "tg_dialogue_01",
-    "prompt": "Ŋlɔ nyamedzɔdzɔ le ame eve dome — nɔvia kple nɔvianyɔnu — le asi dzi. Woƒe nyaɖoɖo nanɔ abe gbɔ̃gbe ene.",
+    "id": "tg_story_03",
+    "prompt": "Raconte une courte fable en Ewe (5 à 10 phrases) avec une tortue (kple) et un lapin (gbɔ̃) comme personnages. La fable doit avoir une morale.",
     "eval_method": "composite",
-    "expected_keywords": [],
-    "expected_format": {"contains_ewe": true, "min_length": 200},
-    "description": "Génération de dialogue naturel"
+    "expected_keywords": [
+      "kple",
+      "gbɔ̃",
+      "nyateƒe",
+      "nublanui",
+      "ame ƒe adzɔnu"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 300
+    },
+    "description": "Teste la narration et l'utilisation des proverbes/morales dans un récit traditionnel."
   },
   {
-    "id": "tg_formal_01",
-    "prompt": "Ŋlɔ leta aɖe yi togbui dzi abe ɖoɖo nyuitɔ ene. Dze gɔme kple àkpe-dada eye nàdo gɔme nusɔ̃nu la.",
+    "id": "tg_letter_04",
+    "prompt": "Écris une lettre formelle en Ewe adressée au chef (fia) de ton village pour lui demander de l'aide pour construire une école (suukui). Inclus les formules de politesse appropriées.",
     "eval_method": "composite",
-    "expected_keywords": ["akpe", "togbui"],
-    "expected_format": {"contains_ewe": true, "min_length": 150},
-    "description": "Texte formel — lettre respectueuse"
+    "expected_keywords": [
+      "fia",
+      "suukui",
+      "kɔdzi",
+      "mɔkpɔkpɔ",
+      "akpe"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 400
+    },
+    "description": "Évalue la maîtrise des registres formels, des salutations et de la structure épistolaire en Ewe."
   },
   {
-    "id": "tg_instruction_01",
-    "prompt": "Ŋlɔ alesi woawɔ fufu le dɔwɔɖi me. Na step-by-step le Ewe me.",
-    "eval_method": "composite",
-    "expected_keywords": ["fufu"],
-    "expected_format": {"contains_ewe": true, "min_length": 150},
-    "description": "Génération d'instructions — recette"
-  },
-  {
-    "id": "tg_summary_01",
-    "prompt": "Tso nya kpui sia gɔme: 'Le Ghana kple Togo dome la, Ewe-dukowo nɔ anyi le anyigba si le aƒedomekpa la dzi. Woƒe gbe nye Ewe gbe, si nye Kwa gbewo dometɔ aɖe. Ame million 7 dzi ƒo gbe sia le Afrika ƒe teƒe vovo me.'",
-    "eval_method": "composite",
-    "expected_keywords": ["Ewe", "gbe"],
-    "expected_format": {"contains_ewe": true, "min_length": 50},
-    "description": "Résumé de texte en Ewe"
-  },
-  {
-    "id": "tg_persuasive_01",
-    "prompt": "Ŋlɔ nuŋlɔɖi aɖe si doa ɖi na amewo bena woasrɔ̃ woƒe anyigba. Zã nyagbe suetɔe le Ewe me.",
+    "id": "tg_description_05",
+    "prompt": "Décris en Ewe un marché (asiɖe) animé dans une ville du sud du Togo. Parle des produits vendus, des bruits et des odeurs. Utilise au moins 100 mots.",
     "eval_method": "ewe_quality",
-    "expected_format": {"contains_ewe": true, "min_length": 150},
-    "description": "Texte persuasif — protection de l'environnement"
+    "expected_keywords": [
+      "asiɖe",
+      "sɔsɔ",
+      "adzɔgbe",
+      "nuɖuɖu",
+      "avelɔ"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 500
+    },
+    "description": "Teste la capacité descriptive avec du vocabulaire sensoriel et contextuel."
   },
   {
-    "id": "tg_news_01",
-    "prompt": "Ŋlɔ nutatanya (news article) kpui aɖe tso sukuu yeye si wotu le Lomé ŋu. Zã nutatanya ƒe ɖoɖo.",
+    "id": "tg_completion_06",
+    "prompt": "Complète le texte suivant en Ewe (ajoute au moins 5 phrases qui font avancer l'histoire) : 'Ŋdi ma ɖevi si ŋkɔe nye Kofi yi suku gbeɖe. Esi wòva ɖo suku la, eʋu eƒe agbalẽwo ta...'",
     "eval_method": "composite",
-    "expected_keywords": ["Lomé", "sukuu"],
-    "expected_format": {"contains_ewe": true, "min_length": 120},
-    "description": "Génération d'article de presse"
+    "expected_keywords": [
+      "Kofi",
+      "suku",
+      "nufiala",
+      "xɔlɔ̃",
+      "ɖe"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 300
+    },
+    "description": "Évalue la cohérence narrative et la capacité à poursuivre un récit amorcé."
   },
   {
-    "id": "tg_explain_01",
-    "prompt": "Ðo internet ƒe dɔwɔwɔ gɔme ɖe ame si mesea nu ɖe esia ŋu o la. Zã Ewe gbe kple kpɔɖeŋu kasiamee.",
+    "id": "tg_instructions_07",
+    "prompt": "Rédige un mode d'emploi simple en Ewe (5 à 7 étapes) pour préparer du fufu (fufuwo) à partir de farine de manioc. Utilise des verbes à l'impératif.",
+    "eval_method": "ewe_quality",
+    "expected_keywords": [
+      "fufuwo",
+      "agbeli",
+      "tsi",
+      "ɖa",
+      "tɔ",
+      "xɔe",
+      "asi"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 250
+    },
+    "description": "Teste l'utilisation de l'impératif et la clarté des instructions dans un contexte culinaire."
+  },
+  {
+    "id": "tg_speech_08",
+    "prompt": "Écris un court discours de cérémonie en Ewe pour un mariage (srɔ̃ɖeɖe). Remercie les familles, les invités et donne des conseils aux nouveaux mariés. Utilise un ton respectueux.",
     "eval_method": "composite",
-    "expected_keywords": ["internet"],
-    "expected_format": {"contains_ewe": true, "min_length": 150},
-    "description": "Explication simple d'un concept technique"
+    "expected_keywords": [
+      "srɔ̃ɖeɖe",
+      "akpe",
+      "dzidzɔ",
+      "lɔlɔ̃",
+      "fofo",
+      "dada"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 400
+    },
+    "description": "Évalue la capacité à utiliser le registre cérémoniel, les bénédictions et les remerciements."
+  },
+  {
+    "id": "tg_paragraph_09",
+    "prompt": "Écris un paragraphe en Ewe d'au moins 100 mots sur l'importance de la famille (ƒome) dans la culture ewe. Parle des rôles des parents et des enfants.",
+    "eval_method": "ewe_quality",
+    "expected_keywords": [
+      "ƒome",
+      "dada",
+      "fofo",
+      "ɖevi",
+      "baba",
+      "ameƒome"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 500
+    },
+    "description": "Teste la capacité à discuter de valeurs culturelles avec un vocabulaire familial."
+  },
+  {
+    "id": "tg_poem_10",
+    "prompt": "Compose un poème en Ewe (au moins 6 vers) sur un enfant (ɖevi) qui apprend à danser (ɖu ɣe) lors d'une fête. Utilise des rimes ou un rythme.",
+    "eval_method": "composite",
+    "expected_keywords": [
+      "ɖevi",
+      "ɖu ɣe",
+      "azɔli",
+      "dzidzɔ",
+      "kpekpe"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 150
+    },
+    "description": "Évalue la création poétique avec un thème joyeux et des sonorités."
+  },
+  {
+    "id": "tg_story_11",
+    "prompt": "Raconte une courte histoire en Ewe (5 à 8 phrases) sur deux amis (xɔlɔ̃wo) qui résolvent un problème ensemble. L'histoire doit montrer la valeur de l'amitié (xɔlɔ̃ɖeɖe).",
+    "eval_method": "ewe_quality",
+    "expected_keywords": [
+      "xɔlɔ̃",
+      "xɔlɔ̃ɖeɖe",
+      "kpekpeɖeŋu",
+      "nyateƒe",
+      "nuwɔna"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 250
+    },
+    "description": "Teste la narration courte avec une leçon morale sur l'entraide."
+  },
+  {
+    "id": "tg_instructions_12",
+    "prompt": "Donne des instructions simples en Ewe (5 étapes) pour planter du maïs (blisi). Explique comment préparer le sol, semer, arroser et entretenir.",
+    "eval_method": "ewe_quality",
+    "expected_keywords": [
+      "blisi",
+      "anyigba",
+      "ƒu",
+      "fã",
+      "tsi",
+      "ŋlɔ"
+    ],
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 250
+    },
+    "description": "Évalue la capacité à donner des consignes pratiques agricoles en Ewe."
   }
 ]

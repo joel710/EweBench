@@ -1,91 +1,110 @@
 [
   {
     "id": "rs_logic_01",
-    "prompt": "Kofi lolo wu Ama. Ama lolo wu Koffi. Ameka nye ga le ame etɔ̃ sia me? Dɔ ɖe eŋu le Ewe me.",
+    "prompt": "Ŋutsuwo katã le ku me. Kofi nye ŋutsu. Eya ta ...?",
     "eval_method": "keywords",
-    "expected_keywords": ["Kofi"],
-    "description": "Raisonnement transitif simple"
+    "expected_keywords": [
+      "Kofi le ku me"
+    ],
+    "description": "Syllogism: All men are mortal, Kofi is a man, therefore Kofi is mortal."
   },
   {
     "id": "rs_logic_02",
-    "prompt": "Avuwo katã nya ŋu nɔ. Beni nye avu. Àté ŋu agblɔ be Beni nya ŋu nɔ a? Ðo ɖe eŋu le Ewe me.",
+    "prompt": "Ne nye xɔ 200 CFA, eye nye ƒle aɖa ba 150 CFA, ga kae susɔ?",
+    "eval_method": "exact_match",
+    "expected_keywords": [
+      "50 CFA"
+    ],
+    "description": "Simple subtraction: 200 - 150 = 50 CFA."
+  },
+  {
+    "id": "rs_logic_03",
+    "prompt": "Nu si le aƒe me, gake wònya aƒea?",
     "eval_method": "keywords",
-    "expected_keywords": ["ɛ", "nɔ", "Beni"],
-    "description": "Syllogisme logique"
+    "expected_keywords": [
+      "vuvɔ"
+    ],
+    "description": "Traditional Ewe riddle: What is in the house but knows the house? Answer: shadow (vuvɔ)."
   },
   {
-    "id": "rs_math_01",
-    "prompt": "Kofi ɖo ga CFA 5000. Eƒle nuku si xɔ CFA 1500. Eƒle agbalẽ si xɔ CFA 2000. Ga nenie ka la ɖo esi ne? Ðo ɖe eŋu le Ewe me.",
+    "id": "rs_logic_04",
+    "prompt": "Xexeame ŋkeke: Dzoɖa, Brãɖa, Kuɖa, ... Ka ɖe?",
+    "eval_method": "exact_match",
+    "expected_keywords": [
+      "Yawoɖa"
+    ],
+    "description": "Sequence: days of the week in Ewe. Monday, Tuesday, Wednesday, next is Thursday (Yawoɖa)."
+  },
+  {
+    "id": "rs_logic_05",
+    "prompt": "Meɖe ga 5000 CFA. Meƒle lã 2000 CFA, eye meƒle aɖa ba 1500 CFA. Ga kae susɔ?",
+    "eval_method": "exact_match",
+    "expected_keywords": [
+      "1500 CFA"
+    ],
+    "description": "Market problem: 5000 - 2000 - 1500 = 1500 CFA remaining."
+  },
+  {
+    "id": "rs_logic_06",
+    "prompt": "Kofi ƒe dekɔnu le 1.70m, Yao ƒe nye 1.60m. Ameka wu?",
     "eval_method": "keywords",
-    "expected_keywords": ["1500"],
-    "description": "Problème arithmétique en contexte"
+    "expected_keywords": [
+      "Kofi"
+    ],
+    "description": "Comparison: Who is taller? Kofi (1.70m) vs Yao (1.60m)."
   },
   {
-    "id": "rs_math_02",
-    "prompt": "Ama ɖo koklo 12. Etsɔ eƒe enu-eta nà Kofi. Ega etsɔ enu-eve le esi kɔ̃ la na Yao. Koklo nenie ka la ɖo esi ne? Dɔ ɖe eŋu le Ewe me.",
+    "id": "rs_logic_07",
+    "prompt": "Ne tsi dza, anyigba aɖo. Ne tsi medza o, ekema anyigba ...?",
+    "eval_method": "exact_match",
+    "expected_keywords": [
+      "maɖo o"
+    ],
+    "description": "Causality: If it rains, ground gets wet. If it doesn't rain, ground does not get wet."
+  },
+  {
+    "id": "rs_logic_08",
+    "prompt": "Ame nye aƒe abe alesi lã nye ... ene.",
     "eval_method": "keywords",
-    "expected_keywords": ["4"],
-    "description": "Problème de fractions en contexte"
+    "expected_keywords": [
+      "agble"
+    ],
+    "description": "Analogy: Person is to house as animal is to farm (agble)."
   },
   {
-    "id": "rs_causal_01",
-    "prompt": "Ne tsi dza la, mɔwo gblẽa. Ne mɔwo gblẽ la, lɔriwo mate ŋu ayi gbɔtɔgbɔtɔ o. Egbe tsi dza. Nuka va ɖo? Ðo ɖe eŋu le Ewe me.",
+    "id": "rs_logic_09",
+    "prompt": "Aʋa nye xɔ abe alesi afɔ nye ... ene.",
     "eval_method": "keywords",
-    "expected_keywords": ["lɔri", "mɔ"],
-    "description": "Raisonnement causal — chaîne d'implications"
+    "expected_keywords": [
+      "ame"
+    ],
+    "description": "Analogy: Door is to room as foot is to person (ame)."
   },
   {
-    "id": "rs_analogy_01",
-    "prompt": "Ti kpɔɖeŋu sia ƒe nya si gɔ̃ ɖoe: 'Ga nye ɖe ame nu abe tsi nye ɖe ati nu ene.' — Nuka ƒe gɔmesese le esia me? Ðo ɖe eŋu le Ewe me.",
-    "eval_method": "composite",
-    "expected_keywords": ["ga", "tsi", "ati"],
-    "expected_format": {"contains_ewe": true, "min_length": 50},
-    "description": "Compréhension d'analogie"
+    "id": "rs_logic_10",
+    "prompt": "Lãwo katã wole agble me. Gake ave mele agble me o. Eya ta ave ...?",
+    "eval_method": "exact_match",
+    "expected_keywords": [
+      "menye lã o"
+    ],
+    "description": "Syllogism with negation: All animals are in the farm. The forest is not in the farm. Therefore the forest is not an animal."
   },
   {
-    "id": "rs_riddle_01",
-    "prompt": "Adzo sia: 'Mele yiyim gake mele teƒe ɖeka. Menye ame o, menye nu o, gake nye nusiawo katã. Nuka nye mi?' Ðo ɖe eŋu le Ewe me.",
-    "eval_method": "composite",
-    "expected_keywords": [],
-    "expected_format": {"contains_ewe": true, "min_length": 30},
-    "description": "Résolution d'énigme"
+    "id": "rs_logic_11",
+    "prompt": "Ne nye xɔ ga 1000 CFA le Kofi si, eye mexe 200 CFA le Yao si, ne meƒle nu 1200 CFA, ga kae nye nye?",
+    "eval_method": "exact_match",
+    "expected_keywords": [
+      "0 CFA"
+    ],
+    "description": "Multi-step math: 1000 + 200 = 1200, spend 1200, remain 0 CFA."
   },
   {
-    "id": "rs_sequence_01",
-    "prompt": "Kpɔ xexlẽdzesi siawo: 2, 6, 12, 20, 30, ... Xexlẽdzesi si kplɔa edzi nka? Ðo ɖe eŋu le Ewe me.",
-    "eval_method": "keywords",
-    "expected_keywords": ["42"],
-    "description": "Suite logique numérique"
-  },
-  {
-    "id": "rs_deduction_01",
-    "prompt": "Le xɔ me la, ame enyi nɔ anyi. Tɔgbui Kofi nɔ anyi le Ama ƒe mɔxenyigba la dzi. Yao nɔ anyi le Kofi kple Esi dome. Ameka nɔ anyi le Yao ƒe dusime? Ðo ɖe eŋu le Ewe me.",
-    "eval_method": "composite",
-    "expected_keywords": ["Esi"],
-    "expected_format": {"contains_ewe": true, "min_length": 40},
-    "description": "Déduction spatiale"
-  },
-  {
-    "id": "rs_planning_01",
-    "prompt": "Kofi ɖo dɔ etɔ̃ si wòle be yeawɔ egbe: yi banke, ƒle nu le asi me, eye wòaɖo mɔtrɔ ayi dɔ. Banke la ɖe ŋkugbe na nkukuɖeha 9:00 kple 12:00 dome ko. Asi la ɖe ŋkugbe le 8:00 yi 18:00. Dɔ la dze gɔme le 14:00. Le ɖoɖo nyuitɔ mɔ̃ ka me Kofi nawɔ dɔ siawo? Ðo ɖe eŋu le Ewe me.",
-    "eval_method": "composite",
-    "expected_keywords": ["banke", "asi", "dɔ"],
-    "expected_format": {"contains_ewe": true, "min_length": 80},
-    "description": "Planification et optimisation d'emploi du temps"
-  },
-  {
-    "id": "rs_contradiction_01",
-    "prompt": "Amea ɖe gblɔ be: 'Nye meɖo ŋusẽ ɖe nya aɖeke ŋu o.' Nya sia dze ɖeka a? Nuka ta? Ðo ɖe eŋu le Ewe me.",
-    "eval_method": "composite",
-    "expected_keywords": [],
-    "expected_format": {"contains_ewe": true, "min_length": 50},
-    "description": "Détection de paradoxe/contradiction"
-  },
-  {
-    "id": "rs_probability_01",
-    "prompt": "Le ga (coin) aɖe ƒeƒe zia 3 me la, ne ta (heads) tɔ va zi 3 katã la, eƒe gɔ̃medzedze ɖe alea ka? Ðo ɖe eŋu le Ewe me.",
-    "eval_method": "keywords",
-    "expected_keywords": ["1/8", "12.5"],
-    "description": "Raisonnement probabiliste"
+    "id": "rs_logic_12",
+    "prompt": "Kofi kple Ama. Wo dometɔ ɖeka nye ŋutsu, ɖeka nye nyɔnu. Ne Kofi nye nyɔnu o, ekema Ama nye ...?",
+    "eval_method": "exact_match",
+    "expected_keywords": [
+      "nyɔnu"
+    ],
+    "description": "Deduction: Kofi and Ama, one man one woman. If Kofi is not a woman, then Ama is a woman."
   }
 ]

@@ -1,77 +1,139 @@
 [
   {
     "id": "if_format_01",
-    "prompt": "Na nyagbe Ewe 3 tso dzɔdzɔme ŋu. Ðo ɖeka-ɖeka le laina yeye dzi eye nàtsɔ xexlẽdzesi dɔ ŋgɔ na wo (1, 2, 3).",
-    "eval_method": "composite",
-    "expected_keywords": ["1", "2", "3"],
-    "expected_format": {"contains_ewe": true, "min_length": 50},
-    "description": "Format numéroté"
+    "prompt": "Ŋlɔ atikutsetse atɔ̃ (5) siwo le Eʋegbe me. Mégana wòazu enuŋudɔ akpa aɖeke o.",
+    "eval_method": "format",
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 40,
+      "list_item_count": 5
+    },
+    "expected_keywords": [
+      "amangoti",
+      "akɔɖu",
+      "adodo",
+      "aɣa",
+      "koko"
+    ],
+    "description": "List exactly 5 fruits in Ewe"
   },
   {
     "id": "if_format_02",
-    "prompt": "Ŋlɔ nya 3 tso Lomé ŋu. Nya gbãtɔ — le Ewe me. Neva etɔ̃lia — le Français me. Neva evelia — le English me.",
-    "eval_method": "keywords",
-    "expected_keywords": ["Lomé"],
-    "description": "Instructions multi-langues"
-  },
-  {
-    "id": "if_constraint_01",
-    "prompt": "Ŋlɔ nuŋlɔɖi kpui aɖe (nya 50 ko) tso tsi-dada ŋu le Ewe me. Mègagblɔ nya 'tsi' aɖeke o le eme.",
+    "prompt": "Tsɔ wɔ ɖeka kple nya siwo gbɔna: ‘Ame si mele ʋuʋu ƒe ŋutinya me o la, menya dzidzedzekpɔkpɔ o.’ Yi edzi kple eɖokui ɖe gomeblɔɖe le Eʋegbe me, gake yɔ na ɖe nyatakakamɛ aɖeke o. Nɔ anyi ɖe nya ɖeka ko me.",
     "eval_method": "format",
-    "expected_format": {"contains_ewe": true, "max_length": 500},
-    "description": "Contrainte — écrire sans un mot spécifique"
-  },
-  {
-    "id": "if_constraint_02",
-    "prompt": "Na ŋkɔ nu 5 siwo ƒe ŋkɔ dze gɔme kple 'a'. Wokatã nanye nu siwo miɖua le Ewe-dukɔ me. Ŋlɔ le Ewe me.",
-    "eval_method": "composite",
-    "expected_keywords": ["a"],
-    "expected_format": {"contains_ewe": true, "min_length": 30},
-    "description": "Contrainte alphabétique + catégorie"
-  },
-  {
-    "id": "if_persona_01",
-    "prompt": "Nàwɔ abe togbui ŋutsu si ƒe ŋkeke le 80 dzi ene eye nàgblɔ nyateƒe tso wò ƒe ŋkeke sue me ŋu na ɖevia aɖe. Zã Ewe gbe eye nànɔ abe ame tsitsi ene kpátó.",
-    "eval_method": "composite",
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 20,
+      "max_sentences": 1
+    },
     "expected_keywords": [],
-    "expected_format": {"contains_ewe": true, "min_length": 100},
-    "description": "Adoption de persona spécifique"
+    "description": "Respond in a single sentence"
   },
   {
-    "id": "if_length_01",
-    "prompt": "Le nya 20-30 dome me, gblɔ nuka nye 'blockchain' le Ewe me.",
+    "id": "if_format_03",
+    "prompt": "Kpɔ nyatakaka siawo ŋuti: (Ame: Kofi, Ƒe: 25, Dɔ: Nuŋlɔla) (Ame: Ama, Ƒe: 22, Dɔ: Nufiala). Ʋu ɖe go wo ɖe kplɔ̃ nu le Eʋegbe me, eye nàʋu table markdown.",
     "eval_method": "format",
-    "expected_format": {"contains_ewe": true, "min_length": 50, "max_length": 300},
-    "description": "Contrainte de longueur stricte"
-  },
-  {
-    "id": "if_structure_01",
-    "prompt": "Wɔ table aɖe le markdown me si fia nkeke 7 le kɔsiɖa me le Ewe me, kple nududu si woɖua le nkeke sia nkeke me.",
-    "eval_method": "format",
-    "expected_format": {"contains_ewe": true, "markdown_elements": ["table"]},
-    "description": "Instruction de mise en forme — tableau"
-  },
-  {
-    "id": "if_structure_02",
-    "prompt": "Ŋlɔ guide kpui aɖe tso alesi woazã telefon yeye gɔme. Zã:\n- Header (#) na akpa sia akpa\n- Liste (bullets) na step-by-step\n- Bold (**) na nya vevie wo\nKatã le Ewe me.",
-    "eval_method": "format",
-    "expected_format": {"contains_ewe": true, "markdown_elements": ["header", "list", "bold"]},
-    "description": "Instructions markdown multiples"
-  },
-  {
-    "id": "if_negation_01",
-    "prompt": "Gblɔ nu 5 siwo nye nyui na ame ƒe laŋsè. Gake — MÈGAGBLƆ nu aɖeke tso nududu kple dɔwɔwɔ ŋu o.",
-    "eval_method": "composite",
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 30,
+      "markdown_elements": [
+        "table"
+      ]
+    },
     "expected_keywords": [],
-    "expected_format": {"contains_ewe": true, "min_length": 80},
-    "description": "Contrainte d'exclusion thématique"
+    "description": "Use markdown table format"
   },
   {
-    "id": "if_multistep_01",
-    "prompt": "Wɔ nuwo sia le ɖoɖo me:\n1. Gblɔ ŋkɔ wò ƒe (invent one)\n2. Gblɔ dukɔ si nɔ wò me\n3. Na nyagbe aɖe le Ewe me si wò lɔ̃a\n4. Ðo nyagbe la gɔme\n5. Gblɔ nu si nèsrɔ̃a ɖe núkpɔkpɔ-yi me",
+    "id": "if_format_04",
+    "prompt": "Bu ɖe nyateƒe si nye be ‘Dukɔwo me tɔ kple gbe gbagbãwo la xɔ ame ɖeka sɔsɔe.’ Gblɔ wò susu le Eʋegbe me, gake nàkpɔ egbɔ be mègatsɔ Fransetɔgbe ƒe nya aɖeke wɔ o.",
+    "eval_method": "format",
+    "expected_format": {
+      "contains_ewe": true,
+      "no_french": true,
+      "min_length": 30
+    },
+    "expected_keywords": [],
+    "description": "Respond ONLY in Ewe, no French words"
+  },
+  {
+    "id": "if_format_05",
+    "prompt": "Nuxexlẽ le suku me nue de ame ŋu? Na esia kple nu dekaɖeka: ɖokui 3 siwo le eŋu (nyo) kple ɖokui 3 siwo le eŋu (vɔ̃). Ŋlɔ wo ɖe Eʋegbe me, eye nàwɔ wo ɖe nyatakakamɛ deaɖeke me.",
     "eval_method": "composite",
-    "expected_keywords": ["1", "2", "3", "4", "5"],
-    "expected_format": {"contains_ewe": true, "min_length": 100},
-    "description": "Instructions multi-étapes séquentielles"
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 60,
+      "list_item_count": 6,
+      "has_pro_con": true
+    },
+    "expected_keywords": [
+      "nyo",
+      "vɔ̃"
+    ],
+    "description": "Give 3 arguments for and 3 against"
+  },
+  {
+    "id": "if_format_06",
+    "prompt": "Míetsu 'Togbɔ hã esi míaɖu nu be míawɔ dɔ la, enyo be míaɖu nu hãe wòafo?' Gblɔ wò susu, eye wò dɔa nɔ anyi ɖe ‘Nyateƒe’ gɔme.",
+    "eval_method": "format",
+    "expected_format": {
+      "contains_ewe": true,
+      "starts_with": "Nyateƒe",
+      "min_length": 20
+    },
+    "expected_keywords": [],
+    "description": "Start response with the word 'Nyateƒe'"
+  },
+  {
+    "id": "if_format_07",
+    "prompt": "ƒo nu tso lãmeme ƒe veviededzi ŋu le Eʋegbe me. Zã lo 3 (etɔ̃) siwo woxɔ le Eʋe loɖo me.",
+    "eval_method": "format",
+    "expected_format": {
+      "contains_ewe": true,
+      "proverb_count": 3,
+      "min_length": 50
+    },
+    "expected_keywords": [
+      "lo",
+      "ɖo"
+    ],
+    "description": "Respond using exactly 3 Ewe proverbs"
+  },
+  {
+    "id": "if_format_08",
+    "prompt": "Ŋlɔ nu siwo dzi wò susu ɖo kpɔ le gbeɖuɖu ŋu le Eʋegbe me. Wɔ walista si me nɔnɔme adre (7) le.",
+    "eval_method": "format",
+    "expected_format": {
+      "contains_ewe": true,
+      "numbered_list_items": 7,
+      "min_length": 40
+    },
+    "expected_keywords": [],
+    "description": "Write a numbered list from 1 to 7"
+  },
+  {
+    "id": "if_format_09",
+    "prompt": "Le Eʋegbe me, ɖe anye dzesi siwo le tanya ''Ame ɖeka me tɔxɛ'' me. Kple ŋusẽ kple wɔwɔ nɔnɔme. Aɖu egbɔ be nàtsɔ kpee wɔ ɖe nya veviwo ŋu.",
+    "eval_method": "format",
+    "expected_format": {
+      "contains_ewe": true,
+      "min_length": 30,
+      "markdown_elements": [
+        "bold"
+      ]
+    },
+    "expected_keywords": [],
+    "description": "Mark important words in bold"
+  },
+  {
+    "id": "if_format_10",
+    "prompt": "Le Eʋegbe me, gblɔ wò susu tso ''Ðo wo ɖokui'' ŋu. Gake nàkpɔ egbɔ be wò nyatakakamɛ meli ɖe nya blaene (50) wo o.",
+    "eval_method": "format",
+    "expected_format": {
+      "contains_ewe": true,
+      "max_word_count": 50,
+      "min_length": 15
+    },
+    "expected_keywords": [],
+    "description": "Respond in less than 50 words"
   }
 ]

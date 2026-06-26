@@ -1,5 +1,5 @@
 """
-ÈwéBench — Benchmark de référence pour l'évaluation de LLMs en langue Ewe.
+ÈwéBench   Benchmark de référence pour l'évaluation de LLMs en langue Ewe.
 
 Catégories d'évaluation:
 1. Compréhension linguistique (grammaire, vocabulaire, tonalité)
@@ -306,7 +306,7 @@ class EweBench:
     def run_full_benchmark(self, verbose: bool = True) -> dict:
         """Exécute le benchmark complet sur toutes les catégories."""
         print(f"\n{'='*60}")
-        print(f"  ÈwéBench v{self.VERSION} — Benchmark d'évaluation LLM en Ewe")
+        print(f"  ÈwéBench v{self.VERSION}   Benchmark d'évaluation LLM en Ewe")
         print(f"  Modèle: {self.model_name}")
         print(f"  Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         print(f"{'='*60}\n")
@@ -322,7 +322,7 @@ class EweBench:
             category_results[cat_key] = result
 
             if result["skipped"]:
-                print(f"  ⚠ Aucun test trouvé — catégorie ignorée")
+                print(f"  ⚠ Aucun test trouvé   catégorie ignorée")
             else:
                 weighted = result["score"] * cat_info["weight"]
                 ewe_score_weighted += weighted
@@ -406,7 +406,7 @@ def run_quick_eval(endpoint: str, model: str, api_key: str = None):
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="ÈwéBench — Benchmark LLM pour l'Ewe")
+    parser = argparse.ArgumentParser(description="ÈwéBench   Benchmark LLM pour l'Ewe")
     parser.add_argument("--endpoint", required=True, help="URL de l'API du modèle")
     parser.add_argument("--model", required=True, help="Nom du modèle")
     parser.add_argument("--api-key", help="Clé API (optionnel)")
